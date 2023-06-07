@@ -642,6 +642,7 @@ Response example here...
 | type           | Yes      | Integer | Order type, 1 Buy, 2 Sell              |
 | price          | Yes      | Decimal | Price                                  |
 | qty            | Yes      | Decimal | Quantity                               |
+| country        | Yes      | Integer | Canada:1                               |
 ```
 Response example here...
 {
