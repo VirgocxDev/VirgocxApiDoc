@@ -1,2 +1,0 @@
-# VirgocxApiDoc
-Details of api
