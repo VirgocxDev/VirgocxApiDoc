@@ -288,80 +288,7 @@ Response example here...
 
 ---
 
-### 4. Market Depth
-
-<br>
-
-#### URL:
-
-> www.virgocx.ca/api/market/depth
-
-#### Request Method:
-
-> GET
-
-<br>
-
-#### Request Parameters:
-
-| Parameter Name | Required | Type   | Description                                                                |
-|----------------|----------|--------|----------------------------------------------------------------------------|
-| symbol         | Yes      | String | "/" needs to be added between the Market name and the Coin name (btc/usdt) |
-
-```
-Response example here...
-{
-	"code": 0,
-	"msg": "success",
-        "success": true,
-	"data": {
-		"asks": [{
-			"price": 2.0000,
-			"qty": 0.0000,
-			"volume": 0.0000
-		}],
-		"bids": [{
-			"price": 1.9000,
-			"qty": 1.0000,
-			"volume": 1.9000
-		}, {
-			"price": 1.7000,
-			"qty": 0.0000,
-			"volume": 0.0000
-		}, {
-			"price": 1.6000,
-			"qty": 1.0000,
-			"volume": 1.6000
-		}, {
-			"price": 1.4000,
-			"qty": 0.0000,
-			"volume": 0.0000
-		}, {
-			"price": 1.3000,
-			"qty": 1.0000,
-			"volume": 1.3000
-		}, {
-			"price": 1.1000,
-			"qty": 0.0000,
-			"volume": 0.0000
-		}],
-		"ts": 1557905596952
-	}
-}
-```
-
-#### Response Parameters:
-
-| Parameter Name | Type    | Description |
-|----------------|---------|-------------|
-| price          | Decimal | Price       |
-| volume         | Decimal | Volume      |
-| qty            | Decimal | Quantity    |
-| ts             | Long    | TimeStamp   |
-
----
-
-### 5. The latest completed history on the market
+### 4. The latest completed history on the market
 
 <br>
 
@@ -430,7 +357,7 @@ Response example here...
 | ts             | Long    | Current timeStamp                   |
 
 ---
-### 6. Account information
+### 5. Account information
 
 <br>
 
@@ -490,7 +417,7 @@ Response example here...
 | coinName        | String  | Coin name      |
 
 ---
-### 7. Query user orders
+### 6. Query user orders
 
 <br>
 
@@ -566,7 +493,7 @@ Response example here...
 | direction      | Integer  | 1 Buy, 2 Sell                                                  |
 | status         | Integer  | -1 Canceled, 0 Placed, 1 Open, 2 Matching, 3 Completed         |
 ---
-### 8. Query completed orders
+### 7. Query completed orders
 
 <br>
 
@@ -617,7 +544,7 @@ Response example here...
 | createTime     | String  | Completion time String format    |
 | createTimeMs   | Long    | Completion time timeStamp format |
 ---
-### 9. Place Order
+### 8. Place Order
 
 <br>
 
@@ -662,7 +589,7 @@ Response example here...
 | orderId        | Integer | Order Id    |
 ---
 
-### 10. Cancel Order
+### 9. Cancel Order
 
 <br>
 
