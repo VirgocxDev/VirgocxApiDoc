@@ -728,9 +728,10 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 #### Request Example:
 > www.virgocx.ca/api/member/accounts?apiKey=AAA&sign=BBB
 <br>
-AAA: Your API key
-> <br>
-BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
+
+>AAA: Your API key
+ 
+>BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
 
 #### Response example:
 ```
@@ -1024,13 +1025,12 @@ BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
 #### Request example:
 
 > https://www.virgocx.ca/api/member/queryTrade?apiKey=AAA&sign=BBB&symbol=CCC
-
 <br>
 
 >AAA: Your API key
-<br>
+
 >BBB: Value of sign
-<br>
+
 >CCC: Value of symbol
 
 #### Response example:
@@ -1092,23 +1092,22 @@ BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
 #### Request example:
 
 > https://www.virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&price=FFF&type=GGG&country=HHH
-
 <br>
 
 >AAA: Your API key
-<br>
+
 >BBB: Value of symbol
-<br>
+
 >CCC: Value of sign
-<br>
+
 >DDD: Value of category
-<br>
+
 >EEE: Value of qty
-<br>
+
 >FFF: Value of price
-<br>
+
 >GGG: Value of type
-<br>
+
 >HHH: Value of country
 #### Response example:
 ```
@@ -1157,9 +1156,9 @@ BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
 > <br>
 
 >AAA: Your API key
-<br>
+
 >BBB: Value of sign
-<br>
+
 >CCC: Value of id(orderId)
 
 #### Response example:
