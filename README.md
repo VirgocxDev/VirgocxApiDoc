@@ -1022,8 +1022,20 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 | apiKey         | Yes      | String  | User private key    |
 | sign           | Yes      | String  | Parameter signature |
 | symbol         | Yes      | String  | Trading pairs       |
+#### Request example:
+
+> https://www.virgocx.ca/api/member/queryTrade?apiKey=AAA&sign=BBB&symbol=CCC
+
+<br>
+
+>AAA: Your API key
+<br>
+>BBB: Value of sign
+<br>
+>CCC: Value of symbol
+
+#### Response example:
 ```
-Response example here...
 {
 	"code": 0,
 	"msg": "success",
@@ -1068,25 +1080,46 @@ Response example here...
 
 #### Request Parameters:
 
-| Parameter Name | Required | Type    | Description                            |
-|----------------|----------|---------|----------------------------------------|
-| apiKey         | Yes      | String  | User private key                       |
-| sign           | Yes      | String  | Parameter signature                    |
-| symbol         | Yes      | String  | Trading pairs                          |
-| category       | Yes      | Integer | Order Category, 1 Limit, 3 Quick Trade |
-| type           | Yes      | Integer | Order type, 1 Buy, 2 Sell              |
-| price          | Yes      | Decimal | Price                                  |
-| qty            | Yes      | Decimal | Quantity                               |
-| country        | Yes      | Integer | Canada:1                               |
+| Parameter Name | Required | Type    | Description                                            |
+|----------------|----------|---------|--------------------------------------------------------|
+| apiKey         | Yes      | String  | User private key                                       |
+| sign           | Yes      | String  | Parameter signature                                    |
+| symbol         | Yes      | String  | Trading pairs                                          |
+| category       | Yes      | Integer | Order Category, 1 Limit, 2 Market Order, 3 Quick Trade |
+| type           | Yes      | Integer | Order type, 1 Buy, 2 Sell                              |
+| price          | Yes      | Decimal | Price                                                  |
+| qty            | Yes      | Decimal | Quantity                                               |
+| country        | Yes      | Integer | Canada:1                                               |
+#### Request example:
+
+> https://www.virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&price=FFF&type=GGG&country=HHH
+
+<br>
+
+>AAA: Your API key
+<br>
+>BBB: Value of symbol
+<br>
+>CCC: Value of sign
+<br>
+>DDD: Value of category
+<br>
+>EEE: Value of qty
+<br>
+>FFF: Value of price
+<br>
+>GGG: Value of type
+<br>
+>HHH: Value of country
+#### Response example:
 ```
-Response example here...
 {
-	"code": 0,
-	"msg": "success",
-	"data": {
-		"orderId": 15
-	},
-	"success": true
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "orderId": "812795"
+    },
+    "success": true
 }
 ```
 
@@ -1118,12 +1151,25 @@ Response example here...
 | apiKey         | Yes      | String  | User private key    |
 | sign           | Yes      | String  | Parameter signature |
 | id             | Yes      | Integer | Order Id            |
+
+#### Request example:
+
+> www.virgocx.ca/api/member/cancelOrder?apiKey=AAA&sign=BBB&id=CCC
+> <br>
+
+>AAA: Your API key
+<br>
+>BBB: Value of sign
+<br>
+>CCC: Value of id(orderId)
+
+#### Response example:
 ```
-Response example here...
+
 {
-    "code": 0, 
-    "msg": "success", 
-    "data": "successful Cancel!", 
+    "code": 0,
+    "msg": "success",
+    "data": "Order cancel successfully!",
     "success": true
 }
 ```
