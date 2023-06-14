@@ -728,10 +728,9 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 #### Request Example:
 > www.virgocx.ca/api/member/accounts?apiKey=AAA&sign=BBB
 <br>
-
->AAA: Your API key
-<br>
->BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
+AAA: Your API key
+> <br>
+BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
 
 #### Response example:
 ```
@@ -806,7 +805,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 <br>
 
 >AAA: Your API key
-<br>
+
 >BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
 #### Response example:
 ```
