@@ -1086,10 +1086,18 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 | symbol         | Yes      | String  | Trading pairs                                          |
 | category       | Yes      | Integer | Order Category, 1 Limit, 2 Market Order, 3 Quick Trade |
 | type           | Yes      | Integer | Order type, 1 Buy, 2 Sell                              |
-| price          | Yes      | Decimal | Price                                                  |
-| qty            | Yes      | Decimal | Quantity                                               |
+| price          | Optional | Decimal | Order price                                            |
+| qty            | Optional | Decimal | Value or crypto currency                               |
+| total          | Optional | Decimal | Value of Canadian Dollars                              |
 | country        | Yes      | Integer | Canada:1                                               |
-#### Request example:
+
+#### Notes：
+>(1) You only need to provide price value in the parameter list when category is limit.
+
+>(2) You only need to provide total value in the parameter list when category is market order or quick trade and type is buy.
+>For example, buy value of 100 canadian dollars BTC, value of total is 100. Other combinations of category and type, please provide qty(amount)
+>of crypto currency you want to trade.
+#### Request example 1(category of limit):
 
 > https://www.virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&price=FFF&type=GGG&country=HHH
 <br>
@@ -1109,6 +1117,19 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 >GGG: Value of type
 
 >HHH: Value of country
+
+#### Request example 2(category of market order and type is buy):
+
+> https://www.virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&total=III&type=GGG&country=HHH
+
+>III: Value of canadian dollars
+
+#### Request example 3(category of market order and type is sell):
+
+> https://www.virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&type=GGG&country=HHH
+
+>EEE: Value of qty
+
 #### Response example:
 ```
 {
