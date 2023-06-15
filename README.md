@@ -33,7 +33,7 @@ step-3:Execute MD5 algorithm.
 md5(AAAAABBBBB19000.11.2BTC/CAD1)
 Get: b60743ad70bad7d1fc47777c0d58604e
 
-step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
+step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder.
 {
     "symbol":"BTC/CAD",
     "category":"1",
@@ -52,7 +52,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/market/history/kline
+> https://virgocx.ca/api/market/history/kline
 
 #### Request Method:
 
@@ -71,7 +71,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 
 ### Request Example:
-> www.virgocx.ca/api/market/history/kline?symbol=ETH/CAD&period=43200
+> https://virgocx.ca/api/market/history/kline?symbol=ETH/CAD&period=43200
 
 ### Response Example:
 ```
@@ -405,7 +405,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/market/detail/merged
+> https://virgocx.ca/api/market/detail/merged
 
 #### Request Method:
 
@@ -422,7 +422,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 <br>
 
 #### Request Example:
-> www.virgocx.ca/api/market/detail/merged?symbol=ETH/CAD
+> https://virgocx.ca/api/market/detail/merged?symbol=ETH/CAD
 
 
 ### Response Example:
@@ -468,7 +468,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/market/tickers
+> https://virgocx.ca/api/market/tickers
 
 #### Request method:
 
@@ -620,7 +620,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/market/trade
+> https://virgocx.ca/api/market/trade
 
 #### Request Method:
 
@@ -635,7 +635,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 | symbol         | Yes      | String | "/" needs to be added between the Market name and the Coin name (BTC/CAD) |
 
 #### Request example:
-> www.virgocx.ca/api/market/trade?symbol=BTC/CAD
+> virgocx.ca/api/market/trade?symbol=BTC/CAD
 > 
 #### Response example:
 ```
@@ -710,7 +710,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/member/accounts
+> https://virgocx.ca/api/member/accounts
 
 #### Request Method:
 
@@ -726,7 +726,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 | sign           | Yes      | String | Parameter signature |
 
 #### Request Example:
-> www.virgocx.ca/api/member/accounts?apiKey=AAA&sign=BBB
+> https://virgocx.ca/api/member/accounts?apiKey=AAA&sign=BBB
 <br>
 
 >AAA: Your API key
@@ -784,7 +784,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/member/queryOrder
+> https://virgocx.ca/api/member/queryOrder
 
 #### Request Method:
 
@@ -802,7 +802,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 | status         | No       | Integer | Order status        |
 
 #### Request Example:
->www.virgocx.ca/api/member/queryOrder?apiKey=AAA&sign=BBB&symbol=BTC/CAD
+>https://virgocx.ca/api/member/queryOrder?apiKey=AAA&sign=BBB&symbol=BTC/CAD
 <br>
 
 >AAA: Your API key
@@ -1007,7 +1007,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/member/queryTrade
+> https://virgocx.ca/api/member/queryTrade
 
 #### Request Method:
 
@@ -1024,7 +1024,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 | symbol         | Yes      | String  | Trading pairs       |
 #### Request example:
 
-> https://www.virgocx.ca/api/member/queryTrade?apiKey=AAA&sign=BBB&symbol=CCC
+> https://virgocx.ca/api/member/queryTrade?apiKey=AAA&sign=BBB&symbol=CCC
 <br>
 
 >AAA: Your API key
@@ -1069,7 +1069,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/member/addOrder
+> https://virgocx.ca/api/member/addOrder
 
 #### Request Method:
 
@@ -1099,7 +1099,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 >of crypto currency you want to trade.
 #### Request example 1(category of limit):
 
-> https://www.virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&price=FFF&type=GGG&country=HHH
+> https://virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&price=FFF&type=GGG&country=HHH
 <br>
 
 >AAA: Your API key
@@ -1120,13 +1120,13 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### Request example 2(category of market order and type is buy):
 
-> https://www.virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&total=III&type=GGG&country=HHH
+> https://virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&total=III&type=GGG&country=HHH
 
 >III: Value of canadian dollars
 
 #### Request example 3(category of market order and type is sell):
 
-> https://www.virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&type=GGG&country=HHH
+> https://virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&type=GGG&country=HHH
 
 >EEE: Value of qty
 
@@ -1155,7 +1155,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### URL:
 
-> www.virgocx.ca/api/member/cancelOrder
+> virgocx.ca/api/member/cancelOrder
 
 #### Request Method:
 
@@ -1173,7 +1173,7 @@ step-4:Final parameters list used to call www.virgocx.ca/api/member/addOrder.
 
 #### Request example:
 
-> www.virgocx.ca/api/member/cancelOrder?apiKey=AAA&sign=BBB&id=CCC
+> https://virgocx.ca/api/member/cancelOrder?apiKey=AAA&sign=BBB&id=CCC
 > <br>
 
 >AAA: Your API key
