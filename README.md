@@ -452,7 +452,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 | Parameter Name | Type    | Description                  |
 |----------------|---------|------------------------------|
-| volume         | Decimal | Volume                       |
+| volume         | String  | Volume                       |
 | symbol         | String  | Trading pairs                |
 | high           | String  | Highest market price         |
 | last           | String  | Market close price           |
@@ -606,7 +606,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 | Parameter Name | Type    | Description                  |
 |----------------|---------|------------------------------|
-| volume         | Decimal | Volume                       |
+| volume         | String  | Volume                       |
 | symbol         | String  | Trading pairs                |
 | high           | String  | Highest market price         |
 | last           | String  | Market close price           |
@@ -706,7 +706,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | type           | Integer | 1 Buy, 2 Sell                       |
 | createTime     | Date    | Completion time in timeStamp format |
 | doublePrice    | Double  | Price in double format              |
-| ts             | Long    | Current timeStamp                   |
+| ts             | Date    | Current timeStamp                   |
 
 ---
 ### 5. Account information
@@ -1000,8 +1000,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 |----------------|---------|----------------------------------------------------------------|
 | createTime     | Date    | Order create time                                              |
 | price          | Decimal | Order price                                                    |
-| qty            | Decimal | Order quantity                                                 |
-| tradeQty       | Decimal | Matched quantity                                               |
+| qty            | Decimal | Order amount(qty)                                              |
+| tradeQty       | Decimal | Matched amount(qty)                                            |
 | id             | Integer | Order id                                                       |
 | type           | Integer | Order type, 1 Limit order, 2 Market order, 3 Quick trade order |
 | direction      | Integer | 1 Buy, 2 Sell                                                  |
@@ -1039,35 +1039,145 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 >CCC: Value of symbol
 
-#### Response example:
+#### Response example with symbol=BTC/CAD:
 ```
 {
-	"code": 0,
-	"msg": "success",
-	"data": [{
-		"id": 1,
-		"amount": 12.000000000000000000000000000000,
-		"qty": 1.000000000000000000,
-		"price": 12.000000000000000000,
-		"type": "buy",
-		"createTime": "2019-04-28 15:34:11.0",
-		"createTimeMs": 1556436851000
-	}],
-	"success": true
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": "12249370",
+            "amount": 88.551471000000000000000000000000,
+            "qty": 0.002900000000000000,
+            "price": 30534.990000000000000000,
+            "type": "sell",
+            "createTime": "2023-01-26 07:02:31",
+            "createTimeMs": 1674687751
+        },
+        {
+            "id": "12230441",
+            "amount": 17.359773890200000000000000000000,
+            "qty": 0.000764740000000000,
+            "price": 22700.230000000000000000,
+            "type": "buy",
+            "createTime": "2022-12-30 01:56:38",
+            "createTimeMs": 1672336598
+        },
+        {
+            "id": "12080372",
+            "amount": 19.999610888400000000000000000000,
+            "qty": 0.000497430000000000,
+            "price": 40205.880000000000000000,
+            "type": "buy",
+            "createTime": "2022-06-01 12:40:08",
+            "createTimeMs": 1654058408
+        },
+        {
+            "id": "12080370",
+            "amount": 19.999912098100000000000000000000,
+            "qty": 0.000497330000000000,
+            "price": 40214.570000000000000000,
+            "type": "buy",
+            "createTime": "2022-06-01 12:39:04",
+            "createTimeMs": 1654058344
+        },
+        {
+            "id": "12075098",
+            "amount": 29.999948340600000000000000000000,
+            "qty": 0.000772020000000000,
+            "price": 38859.030000000000000000,
+            "type": "buy",
+            "createTime": "2022-05-25 11:45:06",
+            "createTimeMs": 1653450306
+        },
+        {
+            "id": "12075084",
+            "amount": 29.999854430600000000000000000000,
+            "qty": 0.000774470000000000,
+            "price": 38735.980000000000000000,
+            "type": "buy",
+            "createTime": "2022-05-25 11:36:06",
+            "createTimeMs": 1653449766
+        },
+        {
+            "id": "12075022",
+            "amount": 99.999653193400000000000000000000,
+            "qty": 0.002609770000000000,
+            "price": 38317.420000000000000000,
+            "type": "buy",
+            "createTime": "2022-05-25 10:11:15",
+            "createTimeMs": 1653444675
+        },
+        {
+            "id": "11756653",
+            "amount": 129.654600000000000000000000000000,
+            "qty": 0.003000000000000000,
+            "price": 43218.200000000000000000,
+            "type": "sell",
+            "createTime": "2021-06-30 15:09:24",
+            "createTimeMs": 1625036964
+        },
+        {
+            "id": "11756650",
+            "amount": 65.384700000000000000000000000000,
+            "qty": 0.001500000000000000,
+            "price": 43589.800000000000000000,
+            "type": "buy",
+            "createTime": "2021-06-30 15:08:15",
+            "createTimeMs": 1625036895
+        },
+        {
+            "id": "11749196",
+            "amount": 19.989477060000000000000000000000,
+            "qty": 0.000405300000000000,
+            "price": 49320.200000000000000000,
+            "type": "buy",
+            "createTime": "2021-06-15 12:09:51",
+            "createTimeMs": 1623730191
+        },
+        {
+            "id": "11749194",
+            "amount": 19.999975968000000000000000000000,
+            "qty": 0.000405360000000000,
+            "price": 49338.800000000000000000,
+            "type": "buy",
+            "createTime": "2021-06-15 12:09:16",
+            "createTimeMs": 1623730156
+        },
+        {
+            "id": "11746584",
+            "amount": 9.999641883000000000000000000000,
+            "qty": 0.000243430000000000,
+            "price": 41078.100000000000000000,
+            "type": "buy",
+            "createTime": "2021-06-09 14:27:38",
+            "createTimeMs": 1623220058
+        },
+        {
+            "id": "11687269",
+            "amount": 30.899671257000000000000000000000,
+            "qty": 0.000499170000000000,
+            "price": 61902.100000000000000000,
+            "type": "buy",
+            "createTime": "2021-04-23 14:02:55",
+            "createTimeMs": 1619157775
+        }
+    ],
+    "success": true
 }
 ```
 
 #### Response Parameters:
 
-| Parameter Name | Type    | Description                      |
-|----------------|---------|----------------------------------|
-| id             | Integer | Trade Id                         |
-| amount         | Decimal | Total trading value(fiat value)  |
-| qty            | Decimal | Total trading amount(crypto)     |
-| price          | Decimal | Trading price                    |
-| type           | String  | Buy or Sell                      |
-| createTime     | String  | Completion time String format    |
-| createTimeMs   | Date    | Completion time timeStamp format |
+| Parameter Name | Type    | Description                               |
+|----------------|---------|-------------------------------------------|
+| id             | Integer | Trade Id                                  |
+| amount         | Decimal | Total trading value(fiat value),qty*price |
+| qty            | Decimal | Total trading amount(crypto)              |
+| price          | Decimal | Trading price                             |
+| type           | String  | buy or sell                               |
+| createTime     | String  | Completion time String format             |
+| createTimeMs   | Date    | Completion time timeStamp format          |
 ---
 ### 8. Place Order
 
@@ -1471,7 +1581,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 | Parameter Name | Type    | Description                  |
 |----------------|---------|------------------------------|
-| volume         | Decimal | Volume                       |
+| volume         | String  | Volume                       |
 | symbol         | String  | Trading pairs                |
 | high           | String  | Highest market price         |
 | last           | String  | Market close price           |
