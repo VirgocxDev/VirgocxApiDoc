@@ -62,10 +62,10 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### Request Parameters:
 
-| Parameter Name | Type    | Description                                                                                                                      |
-|----------------|---------|----------------------------------------------------------------------------------------------------------------------------------|
-| symbol         | String  | Trading pairs,divided by "/"(Such as ETH/CAD)                                                                                    |
-| period         | Integer | K-Line Type (1 minutes-1, 5 minutes-5,10 minutes-10,30 minutes-30,1hr-60,4hrs-240,1day-1440,5days-7200,1week-10080,1month-43200) |
+| Parameter Name | Required | Type    | Description                                                                                                                      |
+|----------------|----------|---------|----------------------------------------------------------------------------------------------------------------------------------|
+| symbol         | Yes      | String  | Trading pairs,for example: ETH/CAD                                                                                               |
+| period         | Yes      | Integer | K-Line Type (1 minutes-1, 5 minutes-5,10 minutes-10,30 minutes-30,1hr-60,4hrs-240,1day-1440,5days-7200,1week-10080,1month-43200) |
 
 <br>
 
@@ -390,12 +390,15 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | Parameter Name | Type    | Description          |
 |----------------|---------|----------------------|
 | id             | Integer | K-Line id            |
+| country        | Integer | Country id, Canada:1 |
 | marketId       | Integer | Market id            |
-| low            | Decimal | Lowest market price  |
-| high           | Decimal | Highest market price |
-| close          | Decimal | Market close price   |
 | open           | Decimal | Market open price    |
-| qty            | Decimal | Quantity             |
+| high           | Decimal | Highest market price |
+| low            | Decimal | Lowest market price  |
+| close          | Decimal | Market close price   |
+| qty            | Decimal | ()                   |
+| createTime     | Date    | Create Time          |
+| countTime      |         | ()                   |
 
 ---
 
@@ -436,8 +439,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
         "high": "2351.91",
         "last": "2314.16",
         "low": "2293.77",
-        "buy": 2277.13,
-        "sell": 2351.20,
+        "bid": 2277.13,
+        "ask": 2351.20,
         "id": 25,
         "changeRate": "-0.83%",
         "open": "2333.59"
@@ -447,18 +450,18 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 ```
 #### Response Parameters:
 
-| Parameter Name | Type    | Description          |
-|----------------|---------|----------------------|
-| id             | Integer | K-Line id            |
-| low            | Decimal | Lowest market price  |
-| high           | Decimal | Highest market price |
-| open           | Decimal | Market open price    |
-| last           | Decimal | Market close price   |
-| sell           | Decimal | Sell one price       |
-| buy            | Decimal | Buy one price        |
-| volume         | Decimal | Volume               |
-| symbol         | String  | Trading pairs        |
-| changeRate     | Decimal | Change rate          |
+| Parameter Name | Type    | Description                  |
+|----------------|---------|------------------------------|
+| volume         | Decimal | Volume                       |
+| symbol         | String  | Trading pairs                |
+| high           | String  | Highest market price         |
+| last           | String  | Market close price           |
+| low            | String  | Lowest market price          |
+| bid            | Decimal | Virgocx bid price            |
+| ask            | Decimal | Virgocx ask price            |
+| id             | Integer | Market id                    |
+| changeRate     | String  | Change rate in last 24 hours |
+| open           | String  | Market open price            |
 
 ---
 
@@ -492,8 +495,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "35177.92",
             "last": "34433.90",
             "low": "34201.58",
-            "buy": 33882.89,
-            "sell": 34984.91,
+            "bid": 33882.89,
+            "ask": 34984.91,
             "id": 24,
             "changeRate": "-1.08%",
             "open": "34810.03"
@@ -504,8 +507,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "0.3511",
             "last": "0.3402",
             "low": "0.3357",
-            "buy": 0.3331,
-            "sell": 0.3474,
+            "bid": 0.3331,
+            "ask": 0.3474,
             "id": 72,
             "changeRate": "-1.07%",
             "open": "0.3439"
@@ -516,8 +519,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "30.87",
             "last": "29.52",
             "low": "29.21",
-            "buy": 28.97,
-            "sell": 30.07,
+            "bid": 28.97,
+            "ask": 30.07,
             "id": 86,
             "changeRate": "-2.99%",
             "open": "30.43"
@@ -528,8 +531,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "0.5656",
             "last": "0.5467",
             "low": "0.5391",
-            "buy": 0.5362,
-            "sell": 0.5572,
+            "bid": 0.5362,
+            "ask": 0.5572,
             "id": 118,
             "changeRate": "-2.30%",
             "open": "0.5596"
@@ -540,8 +543,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "0.884",
             "last": "0.864",
             "low": "0.857",
-            "buy": 0.847,
-            "sell": 0.881,
+            "bid": 0.847,
+            "ask": 0.881,
             "id": 61,
             "changeRate": "-0.46%",
             "open": "0.868"
@@ -552,8 +555,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "0.2943",
             "last": "0.2855",
             "low": "0.2832",
-            "buy": 0.2802,
-            "sell": 0.2909,
+            "bid": 0.2802,
+            "ask": 0.2909,
             "id": 87,
             "changeRate": "-1.10%",
             "open": "0.2887"
@@ -564,8 +567,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "37.63",
             "last": "36.20",
             "low": "35.88",
-            "buy": 35.53,
-            "sell": 36.88,
+            "bid": 35.53,
+            "ask": 36.88,
             "id": 66,
             "changeRate": "-3.26%",
             "open": "37.42"
@@ -576,8 +579,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "0.02778",
             "last": "0.02667",
             "low": "0.02625",
-            "buy": 0.02615,
-            "sell": 0.02719,
+            "bid": 0.02615,
+            "ask": 0.02719,
             "id": 96,
             "changeRate": "-1.87%",
             "open": "0.02718"
@@ -588,8 +591,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "high": "0.63236",
             "last": "0.60505",
             "low": "0.60080",
-            "buy": 0.59314,
-            "sell": 0.61697,
+            "bid": 0.59314,
+            "ask": 0.61697,
             "id": 125,
             "changeRate": "-1.40%",
             "open": "0.61367"
@@ -601,16 +604,18 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### Response Parameters:
 
-| Parameter Name | Type    | Description          |
-|----------------|---------|----------------------|
-| id             | Integer | K-Line id            |
-| low            | Decimal | Lowest market price  |
-| high           | Decimal | Highest market price |
-| open           | Decimal | Market open price    |
-| last           | Decimal | Market close price   |
-| volume         | Decimal | Volume               |
-| symbol         | String  | Trading pairs        |
-| changeRate     | Decimal | Change rate          |
+| Parameter Name | Type    | Description                  |
+|----------------|---------|------------------------------|
+| volume         | Decimal | Volume                       |
+| symbol         | String  | Trading pairs                |
+| high           | String  | Highest market price         |
+| last           | String  | Market close price           |
+| low            | String  | Lowest market price          |
+| bid            | Decimal | Virgocx bid price            |
+| ask            | Decimal | Virgocx ask price            |
+| id             | Integer | Market Id                    |
+| changeRate     | String  | Change rate in last 24 hours |
+| open           | String  | Market open price            |
 
 ---
 
@@ -722,7 +727,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 | Parameter Name | Required | Type   | Description         |
 |----------------|----------|--------|---------------------|
-| apiKey         | Yes      | String | User private key    |
+| apiKey         | Yes      | String | Api Key             |
 | sign           | Yes      | String | Parameter signature |
 
 #### Request Example:
@@ -770,12 +775,12 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### Response Parameters:
 
-| Parameter Name  | Type    | Description    |
-|-----------------|---------|----------------|
-| freezingBalance | Decimal | Frozen balance |
-| total           | Decimal | Total quantity |
-| balance         | Decimal | Balance        |
-| coinName        | String  | Coin name      |
+| Parameter Name  | Type    | Description                            |
+|-----------------|---------|----------------------------------------|
+| freezingBalance | Decimal | Frozen balance                         |
+| total           | Decimal | Total balance(balance+freezingBalance) |
+| balance         | Decimal | Balance (available balance)            |
+| coinName        | String  | Coin name                              |
 
 ---
 ### 6. Query user orders
@@ -991,15 +996,16 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### Response Parameters:
 
-| Parameter Name | Type     | Description                                                    |
-|----------------|----------|----------------------------------------------------------------|
-| price          | Decimal  | Order price                                                    |
-| qty            | Decimal  | Order quantity                                                 |
-| tradeQty       | Decimal  | Matched quantity                                               |
-| id             | Integer  | Order id                                                       |
-| type           | Integer  | Order type, 1 Limit order, 2 Market order, 3 Quick trade order |
-| direction      | Integer  | 1 Buy, 2 Sell                                                  |
-| status         | Integer  | -1 Canceled, 0 Placed, 1 Open, 2 Matching, 3 Completed         |
+| Parameter Name | Type    | Description                                                    |
+|----------------|---------|----------------------------------------------------------------|
+| createTime     | Date    | Order create time                                              |
+| price          | Decimal | Order price                                                    |
+| qty            | Decimal | Order quantity                                                 |
+| tradeQty       | Decimal | Matched quantity                                               |
+| id             | Integer | Order id                                                       |
+| type           | Integer | Order type, 1 Limit order, 2 Market order, 3 Quick trade order |
+| direction      | Integer | 1 Buy, 2 Sell                                                  |
+| status         | Integer | -1 Canceled, 0 Placed, 1 Open, 2 Matching, 3 Completed         |
 ---
 ### 7. Query completed orders
 
@@ -1055,13 +1061,13 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 | Parameter Name | Type    | Description                      |
 |----------------|---------|----------------------------------|
-| id             | String  | Trade Id                         |
-| amount         | Decimal | Total amount                     |
-| qty            | Decimal | Quantity                         |
-| price          | Decimal | Price                            |
+| id             | Integer | Trade Id                         |
+| amount         | Decimal | Total trading value(fiat value)  |
+| qty            | Decimal | Total trading amount(crypto)     |
+| price          | Decimal | Trading price                    |
 | type           | String  | Buy or Sell                      |
 | createTime     | String  | Completion time String format    |
-| createTimeMs   | Long    | Completion time timeStamp format |
+| createTimeMs   | Date    | Completion time timeStamp format |
 ---
 ### 8. Place Order
 
@@ -1144,9 +1150,9 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### Response Parameters:
 
-| Parameter Name | Type    | Description |
-|----------------|---------|-------------|
-| orderId        | Integer | Order Id    |
+| Parameter Name | Type   | Description |
+|----------------|--------|-------------|
+| orderId        | String | Order Id    |
 ---
 
 ### 9. Cancel Order
@@ -1155,7 +1161,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### URL:
 
-> virgocx.ca/api/member/cancelOrder
+> https://virgocx.ca/api/member/cancelOrder
 
 #### Request Method:
 
@@ -1194,5 +1200,286 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 ```
 
 #### Response Parameters:NO
+
+### 10. Cancel Order
+
+<br>
+
+#### URL:
+
+> https://virgocx.ca/api/member/discountPrice
+
+#### Note:get discount price depend on your account's tier level, for tier level details, you may check your current Reward Tier by visiting https://virgocx.ca/ and logging in to the VirgoCX account.
+
+#### Request Method:
+
+> GET
+
+<br>
+
+#### Request Parameters:
+
+| Parameter Name | Required | Type   | Description                        |
+|----------------|----------|--------|------------------------------------|
+| apiKey         | Yes      | String | User private key                   |
+| sign           | Yes      | String | Parameter signature                |
+| symbol         | Optional | String | Trading pairs,for example: ETH/CAD |
+
+#### Request example(1), get discount price of all trading pairs:
+
+> https://virgocx.ca/api/member/discountPrice?apiKey=AAA&sign=BBB
+> <br>
+
+>AAA: Your API key
+
+>BBB: Value of sign
+
+#### Request example(2), get discount price of specific trading pair:
+> https://virgocx.ca/api/member/discountPrice?apiKey=AAA&symbol=ETH/CAD
+> <br>
+
+>AAA: Your API key
+
+>BBB: Value of sign
+
+>CCC: Trading pair name
+
+#### Response example(1):
+```
+{
+    "code":0,
+    "msg":"success",
+    "data":[
+        {
+            "volume":"0",
+            "symbol":"BTC/CAD",
+            "high":"33864.84",
+            "last":"33839.85",
+            "low":"33680.46",
+            "bid":33298.34,
+            "ask":34381.35,
+            "id":24,
+            "changeRate":"+0.08%",
+            "open":"33809.50"
+        },
+        {
+            "volume":"0",
+            "symbol":"ETH/CAD",
+            "high":"2215.85",
+            "last":"2209.03",
+            "low":"2203.67",
+            "bid":2173.67,
+            "ask":2244.38,
+            "id":25,
+            "changeRate":"+0.21%",
+            "open":"2204.26"
+        },
+        {
+            "volume":"0",
+            "symbol":"USDC/CAD",
+            "high":"1.3239",
+            "last":"1.3229",
+            "low":"1.3213",
+            "bid":1.3016,
+            "ask":1.344,
+            "id":55,
+            "changeRate":"-0.02%",
+            "open":"1.3232"
+        },
+        {
+            "volume":"0",
+            "symbol":"ADA/CAD",
+            "high":"0.349570",
+            "last":"0.346358",
+            "low":"0.345384",
+            "bid":0.340731,
+            "ask":0.351984,
+            "id":68,
+            "changeRate":"-0.61%",
+            "open":"0.348490"
+        },
+        {
+            "volume":"0",
+            "symbol":"SOL/CAD",
+            "high":"19.76",
+            "last":"19.62",
+            "low":"19.47",
+            "bid":19.29,
+            "ask":19.93,
+            "id":75,
+            "changeRate":"+0.15%",
+            "open":"19.59"
+        },
+        {
+            "volume":"0",
+            "symbol":"AVAX/CAD",
+            "high":"15.20",
+            "last":"15.11",
+            "low":"15.07",
+            "bid":14.85,
+            "ask":15.35,
+            "id":79,
+            "changeRate":"-0.46%",
+            "open":"15.18"
+        },
+        {
+            "volume":"0",
+            "symbol":"DOT/CAD",
+            "high":"5.8133",
+            "last":"5.7906",
+            "low":"5.7681",
+            "bid":5.6976,
+            "ask":5.8834,
+            "id":69,
+            "changeRate":"-0.08%",
+            "open":"5.7956"
+        },
+        {
+            "volume":"0",
+            "symbol":"DOGE/CAD",
+            "high":"0.0821072",
+            "last":"0.0817154",
+            "low":"0.0814499",
+            "bid":0.0804001,
+            "ask":0.0830306,
+            "id":57,
+            "changeRate":"+0.11%",
+            "open":"0.0816216"
+        },
+        {
+            "volume":"0",
+            "symbol":"SHIB/CAD",
+            "high":"0.00000897",
+            "last":"0.00000892",
+            "low":"0.00000891",
+            "bid":0.00000876,
+            "ask":0.00000907,
+            "id":76,
+            "changeRate":"-0.22%",
+            "open":"0.00000894"
+        },
+        {
+            "volume":"0",
+            "symbol":"MATIC/CAD",
+            "high":"0.7857",
+            "last":"0.7803",
+            "low":"0.7758",
+            "bid":0.7677,
+            "ask":0.7928,
+            "id":71,
+            "changeRate":"-0.01%",
+            "open":"0.7804"
+        },
+        {
+            "volume":"0",
+            "symbol":"ARB/CAD",
+            "high":"1.2732",
+            "last":"1.2651",
+            "low":"1.2506",
+            "bid":1.2419,
+            "ask":1.2881,
+            "id":536,
+            "changeRate":"+0.50%",
+            "open":"1.2588"
+        },
+        {
+            "volume":"0",
+            "symbol":"ATOM/CAD",
+            "high":"11.6602",
+            "last":"11.6381",
+            "low":"11.5358",
+            "bid":11.4264,
+            "ask":11.8497,
+            "id":74,
+            "changeRate":"+0.87%",
+            "open":"11.5369"
+        },
+        {
+            "volume":"0",
+            "symbol":"IMX/CAD",
+            "high":"0.811",
+            "last":"0.802",
+            "low":"0.798",
+            "bid":0.785,
+            "ask":0.817,
+            "id":529,
+            "changeRate":"-0.98%",
+            "open":"0.810"
+        },
+        {
+            "volume":"0",
+            "symbol":"LTC/CAD",
+            "high":"99.95",
+            "last":"99.73",
+            "low":"99.00",
+            "bid":98.12,
+            "ask":101.33,
+            "id":30,
+            "changeRate":"+0.23%",
+            "open":"99.50"
+        },
+        {
+            "volume":"0",
+            "symbol":"LDO/CAD",
+            "high":"2.301",
+            "last":"2.275",
+            "low":"2.257",
+            "bid":2.232,
+            "ask":2.316,
+            "id":530,
+            "changeRate":"+0.30%",
+            "open":"2.268"
+        },
+        {
+            "volume":"0",
+            "symbol":"LINK/CAD",
+            "high":"7.01392",
+            "last":"6.96103",
+            "low":"6.95325",
+            "bid":6.83425,
+            "ask":7.0878,
+            "id":60,
+            "changeRate":"-0.58%",
+            "open":"7.00166"
+        }
+    ]
+}
+```
+#### Response example(2):
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "volume": "0",
+            "symbol": "ETH/CAD",
+            "high": "2242.26",
+            "last": "2240.76",
+            "low": "2177.84",
+            "bid": 2204.70,
+            "ask": 2276.80,
+            "id": 25,
+            "changeRate": "+1.65%",
+            "open": "2204.26"
+        }
+    ],
+    "success": true
+}
+```
+#### Response Parameters:
+
+| Parameter Name | Type    | Description                  |
+|----------------|---------|------------------------------|
+| volume         | Decimal | Volume                       |
+| symbol         | String  | Trading pairs                |
+| high           | String  | Highest market price         |
+| last           | String  | Market close price           |
+| low            | String  | Lowest market price          |
+| bid            | Decimal | Virgocx bid price            |
+| ask            | Decimal | Virgocx ask price            |
+| id             | Integer | Market id                    |
+| changeRate     | String  | Change rate in past 24 hours |
+| open           | String  | Market open price            |
 
 ---
