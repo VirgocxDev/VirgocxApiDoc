@@ -1238,13 +1238,37 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 > https://virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&total=III&type=GGG&country=HHH
 
+>AAA: Your API key
+
+>BBB: Value of symbol
+
+>CCC: Value of sign
+
+>DDD: Value of category
+
+>GGG: Value of type
+
+>HHH: Value of country
+
 >III: Value of canadian dollars
 
 #### Request example 3(category of market order and type is sell):
 
 > https://virgocx.ca/api/member/addOrder?apiKey=AAA&symbol=BBB&sign=CCC&category=DDD&qty=EEE&type=GGG&country=HHH
 
+>AAA: Your API key
+
+>BBB: Value of symbol
+
+>CCC: Value of sign
+
+>DDD: Value of category
+
 >EEE: Value of qty
+
+>GGG: Value of type
+
+>HHH: Value of country
 
 #### Response example:
 ```
