@@ -6,9 +6,9 @@ Please contact us to get your apiKey and apiSecret.
 Note: Pay attention that these two keys are related to your account security. So keep them securely.
 > Public interfaces do not need signatures. Request parameters of all interfaces which need signature must contain sign parameters.
 
-> apiKey: private key of user access provided by VirgoCX.
+> apiKey: private api key provided by VirgoCX.
 
-> apiSecret: private key of parameter signature request.
+> apiSecret: private api secret provided by VirgoCX.
 
 ```
 Signature rules, as example of placing order interface:
@@ -19,11 +19,11 @@ step-1:Sort the update parameters list by initial.
 {
     "apiKey":"AAAAA",
     "apiSecret":"BBBBB",
-    "category":"1",
-    "price":"9000.1",
-    "qty":"1.2",
+    "category":1,
+    "price":9000.1,
+    "qty":1.2,
     "symbol":"BTC/CAD",
-    "type":"1"
+    "type":1
 }
 
 step-2:Generate the character string by putting them together. 
@@ -36,10 +36,10 @@ Get: b60743ad70bad7d1fc47777c0d58604e
 step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder.
 {
     "symbol":"BTC/CAD",
-    "category":"1",
-    "type":"1",
-    "price":"9000.1",
-    "qty":"1.2",
+    "category":1,
+    "type":1,
+    "price":9000.1,
+    "qty":1.2,
     "apiKey":"AAAAA",
     "sign":"b60743ad70bad7d1fc47777c0d58604e"
 }
@@ -82,303 +82,213 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
     "data": [
         {
             "id": 85665,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 401.0,
             "high": 475.95,
             "low": 360.65,
             "close": 388.3,
-            "qty": 10873.662506,
-            "createTime": 1559318400000,
-            "countTime": null
+            "createTime": 1559318400000
         },
         {
             "id": 408678,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 387.06,
             "high": 416.59,
             "low": 252.5,
             "close": 285.49,
-            "qty": 39631.3236542,
-            "createTime": 1561910400000,
-            "countTime": null
+            "createTime": 1561910400000
         },
         {
             "id": 806012,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 285.72,
             "high": 315.69,
             "low": 219.61,
             "close": 223.87,
-            "qty": 8346.04195532,
-            "createTime": 1564588800000,
-            "countTime": null
+            "createTime": 1564588800000
         },
         {
             "id": 1345976,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 223.89,
             "high": 418.8,
             "low": 202.23,
             "close": 237.32,
-            "qty": 19125.03882276,
-            "createTime": 1567267200000,
-            "countTime": null
+            "createTime": 1567267200000
         },
         {
             "id": 1960838,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 237.13,
             "high": 259.89,
             "low": 208.99,
             "close": 239.54,
-            "qty": 10960.61274312,
-            "createTime": 1569859200000,
-            "countTime": null
+            "createTime": 1569859200000
         },
         {
             "id": 2641817,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 239.61,
             "high": 255.87,
             "low": 175.78,
             "close": 201.8,
-            "qty": 43234.79312868,
-            "createTime": 1572537600000,
-            "countTime": null
+            "createTime": 1572537600000
         },
         {
             "id": 3369813,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 201.56,
             "high": 202.98,
             "low": 152.79,
             "close": 167.82,
-            "qty": 44053.47159586,
-            "createTime": 1575129600000,
-            "countTime": null
+            "createTime": 1575129600000
         },
         {
             "id": 3848988,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 167.91,
             "high": 246.32,
             "low": 162.72,
             "close": 237.77,
-            "qty": 30077.39236914,
-            "createTime": 1577808000000,
-            "countTime": null
+            "createTime": 1577808000000
         },
         {
             "id": 4070825,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 237.82,
             "high": 382.72,
             "low": 234.92,
             "close": 301.2,
-            "qty": 2721.21959982,
-            "createTime": 1580486400000,
-            "countTime": null
+            "createTime": 1580486400000
         },
         {
             "id": 4284913,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 300.04,
             "high": 309.66,
             "low": 145.0,
             "close": 187.84,
-            "qty": 370.3166959,
-            "createTime": 1582992000000,
-            "countTime": null
+            "createTime": 1582992000000
         },
         {
             "id": 4633451,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 187.92,
             "high": 315.15,
             "low": 183.41,
             "close": 289.99,
-            "qty": 8900.03927458,
-            "createTime": 1585670400000,
-            "countTime": null
+            "createTime": 1585670400000
         },
         {
             "id": 4996227,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 289.49,
             "high": 339.67,
             "low": 247.86,
             "close": 321.68,
-            "qty": 9290.38332074,
-            "createTime": 1588262400000,
-            "countTime": null
+            "createTime": 1588262400000
         },
         {
             "id": 5347054,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 321.04,
             "high": 342.42,
             "low": 296.0,
             "close": 307.68,
-            "qty": 8927.43066564,
-            "createTime": 1590940800000,
-            "countTime": null
+            "createTime": 1590940800000
         },
         {
             "id": 5709609,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 307.92,
             "high": 466.95,
             "low": 303.03,
             "close": 461.41,
-            "qty": 9393.82438502,
-            "createTime": 1593532800000,
-            "countTime": null
+            "createTime": 1593532800000
         },
         {
             "id": 6063986,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 496.65,
             "high": 588.86,
             "low": 487.03,
             "close": 520.19,
-            "qty": 2577.4169199000003,
-            "createTime": 1596214800000,
-            "countTime": null
+            "createTime": 1596214800000
         },
         {
             "id": 6531682,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 461.7,
             "high": 527.43,
             "low": 426.45,
             "close": 471.06,
-            "qty": 0.0,
-            "createTime": 1598893200000,
-            "countTime": null
+            "createTime": 1598893200000
         },
         {
             "id": 7073396,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 470.08,
             "high": 552.09,
             "low": 443.9,
             "close": 543.83,
-            "qty": 0.0,
-            "createTime": 1601485200000,
-            "countTime": null
+            "createTime": 1601485200000
         },
         {
             "id": 7568326,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 518.81,
             "high": 810.71,
             "low": 493.82,
             "close": 688.33,
-            "qty": 0.0,
-            "createTime": 1604163600000,
-            "countTime": null
+            "createTime": 1604163600000
         },
         {
             "id": 8100966,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 762.37,
             "high": 848.59,
             "low": 687.3,
             "close": 808.68,
-            "qty": 0.0,
-            "createTime": 1606755600000,
-            "countTime": null
+            "createTime": 1606755600000
         },
         {
             "id": 8711518,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 1169.55,
             "high": 1828.36,
             "low": 1169.55,
             "close": 1566.82,
-            "qty": 0.0,
-            "createTime": 1609434000000,
-            "countTime": null
+            "createTime": 1609434000000
         },
         {
             "id": 9318087,
-            "country": null,
+            "country": 1,
             "marketId": 25,
             "open": 1674.46,
             "high": 2572.31,
             "low": 1640.68,
             "close": 2572.31,
-            "qty": 0.0,
-            "createTime": 1612112400000,
-            "countTime": null
-        },
-        {
-            "id": 10055754,
-            "country": null,
-            "marketId": 25,
-            "open": 1773.88,
-            "high": 2377.11,
-            "low": 1773.88,
-            "close": 2110.23,
-            "qty": 0.0,
-            "createTime": 1614531600000,
-            "countTime": null
-        },
-        {
-            "id": 10858992,
-            "country": null,
-            "marketId": 25,
-            "open": 2594.71,
-            "high": 3235.89,
-            "low": 2453.25,
-            "close": 2743.3,
-            "qty": 0.0,
-            "createTime": 1617210000000,
-            "countTime": null
-        },
-        {
-            "id": 11705684,
-            "country": null,
-            "marketId": 25,
-            "open": 3650.5,
-            "high": 5285.36,
-            "low": 2309.65,
-            "close": 2907.02,
-            "qty": 0.0,
-            "createTime": 1619802000000,
-            "countTime": null
-        },
-        {
-            "id": 12525424,
-            "country": null,
-            "marketId": 25,
-            "open": 3236.02,
-            "high": 3442.52,
-            "low": 2117.94,
-            "close": 2135.47,
-            "qty": 0.0,
-            "createTime": 1622480400000,
-            "countTime": null
+            "createTime": 1612112400000
         }
     ],
     "success": true
@@ -389,16 +299,14 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 | Parameter Name | Type    | Description          |
 |----------------|---------|----------------------|
-| id             | Integer | K-Line id            |
+| id             | Integer | K-Line record id     |
 | country        | Integer | Country id, Canada:1 |
 | marketId       | Integer | Market id            |
 | open           | Decimal | Market open price    |
 | high           | Decimal | Highest market price |
 | low            | Decimal | Lowest market price  |
 | close          | Decimal | Market close price   |
-| qty            | Decimal | ()                   |
-| createTime     | Date    | Create Time          |
-| countTime      |         | ()                   |
+| createTime     | Date    | K-Line create Time   |
 
 ---
 
@@ -434,35 +342,42 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
     "code": 0,
     "msg": "success",
     "data": {
-        "volume": "0",
         "symbol": "ETH/CAD",
-        "high": "2351.91",
-        "last": "2314.16",
-        "low": "2293.77",
-        "bid": 2277.13,
-        "ask": 2351.20,
+        "last": "2400.24",
+        "minTotal": 5.00000000,
+        "volume": "0",
+        "high": "2401.78",
+        "low": "2389.47",
+        "Ask": 2438.75,
+        "priceDecimals": 2,
+        "qtyDecimals": 3,
         "id": 25,
-        "changeRate": "-0.83%",
-        "open": "2333.59"
+        "Bid": 2361.73,
+        "changeRate": "+0.26%",
+        "open": "2393.82",
+        "minQty": 0.00200000
     },
     "success": true
 }
 ```
 #### Response Parameters:
 
-| Parameter Name | Type    | Description                  |
-|----------------|---------|------------------------------|
-| volume         | String  | Volume                       |
-| symbol         | String  | Trading pairs                |
-| high           | String  | Highest market price         |
-| last           | String  | Market close price           |
-| low            | String  | Lowest market price          |
-| bid            | Decimal | Virgocx bid price            |
-| ask            | Decimal | Virgocx ask price            |
-| id             | Integer | Market id                    |
-| changeRate     | String  | Change rate in last 24 hours |
-| open           | String  | Market open price            |
-
+| Parameter Name | Type    | Description                          |
+|----------------|---------|--------------------------------------|
+| volume         | String  | Volume                               |
+| symbol         | String  | Trading pairs                        |
+| high           | String  | Highest market price                 |
+| last           | String  | Market close price                   |
+| low            | String  | Lowest market price                  |
+| bid            | Decimal | Virgocx bid price                    |
+| ask            | Decimal | Virgocx ask price                    |
+| id             | Integer | Market id                            |
+| changeRate     | String  | Change rate in last 24 hours         |
+| open           | String  | Market open price                    |
+| minQty         | Decimal | Minimum order quantity               |
+| priceDecimals  | Integer | The maximum accuracy of the price    |
+| qtyDecimals    | Integer | The maximum accuracy of the quantity |
+| minTotal       | Decimal | Minimum order amount                 |
 ---
 
 ### 3. The latest tickers of all trading pairs
@@ -490,112 +405,180 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
     "msg": "success",
     "data": [
         {
-            "volume": "0",
             "symbol": "BTC/CAD",
-            "high": "35177.92",
-            "last": "34433.90",
-            "low": "34201.58",
-            "bid": 33882.89,
-            "ask": 34984.91,
+            "last": "38128.13",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "38128.27",
+            "low": "37897.79",
+            "Ask": 38740.83,
+            "priceDecimals": 2,
+            "qtyDecimals": 4,
             "id": 24,
-            "changeRate": "-1.08%",
-            "open": "34810.03"
+            "Bid": 37515.44,
+            "changeRate": "+0.49%",
+            "open": "37938.54",
+            "minQty": 0.00018000
         },
         {
+            "symbol": "ETH/CAD",
+            "last": "2401.28",
+            "minTotal": 5.00000000,
             "volume": "0",
-            "symbol": "ENJ/CAD",
-            "high": "0.3511",
-            "last": "0.3402",
-            "low": "0.3357",
-            "bid": 0.3331,
-            "ask": 0.3474,
-            "id": 72,
-            "changeRate": "-1.07%",
-            "open": "0.3439"
+            "high": "2401.78",
+            "low": "2389.47",
+            "Ask": 2439.75,
+            "priceDecimals": 2,
+            "qtyDecimals": 3,
+            "id": 25,
+            "Bid": 2362.81,
+            "changeRate": "+0.31%",
+            "open": "2393.82",
+            "minQty": 0.00200000
         },
         {
+            "symbol": "USDC/CAD",
+            "last": "1.3214",
+            "minTotal": 5.00000000,
             "volume": "0",
-            "symbol": "KSM/CAD",
-            "high": "30.87",
-            "last": "29.52",
-            "low": "29.21",
-            "bid": 28.97,
-            "ask": 30.07,
-            "id": 86,
-            "changeRate": "-2.99%",
-            "open": "30.43"
+            "high": "1.3220",
+            "low": "1.3210",
+            "Ask": 1.3426,
+            "priceDecimals": 4,
+            "qtyDecimals": 4,
+            "id": 55,
+            "Bid": 1.3002,
+            "changeRate": "-0.04%",
+            "open": "1.3220",
+            "minQty": 4.00000000
         },
         {
+            "symbol": "ADA/CAD",
+            "last": "0.368348",
+            "minTotal": 5.00000000,
             "volume": "0",
-            "symbol": "CELO/CAD",
-            "high": "0.5656",
-            "last": "0.5467",
-            "low": "0.5391",
-            "bid": 0.5362,
-            "ask": 0.5572,
-            "id": 118,
-            "changeRate": "-2.30%",
-            "open": "0.5596"
+            "high": "0.371880",
+            "low": "0.367125",
+            "Ask": 0.374329,
+            "priceDecimals": 6,
+            "qtyDecimals": 2,
+            "id": 68,
+            "Bid": 0.362368,
+            "changeRate": "-0.77%",
+            "open": "0.371239",
+            "minQty": 7.50000000
         },
         {
+            "symbol": "SOL/CAD",
+            "last": "22.24",
+            "minTotal": 5.00000000,
             "volume": "0",
-            "symbol": "CRV/CAD",
-            "high": "0.884",
-            "last": "0.864",
-            "low": "0.857",
-            "bid": 0.847,
-            "ask": 0.881,
-            "id": 61,
-            "changeRate": "-0.46%",
-            "open": "0.868"
+            "high": "22.24",
+            "low": "22.07",
+            "Ask": 22.60,
+            "priceDecimals": 2,
+            "qtyDecimals": 6,
+            "id": 75,
+            "Bid": 21.88,
+            "changeRate": "+0.49%",
+            "open": "22.13",
+            "minQty": 0.12000000
         },
         {
+            "symbol": "XLM/CAD",
+            "last": "0.110742",
+            "minTotal": 5.00000000,
             "volume": "0",
-            "symbol": "LRC/CAD",
-            "high": "0.2943",
-            "last": "0.2855",
-            "low": "0.2832",
-            "bid": 0.2802,
-            "ask": 0.2909,
-            "id": 87,
-            "changeRate": "-1.10%",
-            "open": "0.2887"
+            "high": "0.110756",
+            "low": "0.110328",
+            "Ask": 0.112551,
+            "priceDecimals": 6,
+            "qtyDecimals": 4,
+            "id": 56,
+            "Bid": 0.108933,
+            "changeRate": "+0.06%",
+            "open": "0.110667",
+            "minQty": 30.00000000
         },
         {
+            "symbol": "MANA/CAD",
+            "last": "0.48484",
+            "minTotal": 5.00000000,
             "volume": "0",
-            "symbol": "COMP/CAD",
-            "high": "37.63",
-            "last": "36.20",
-            "low": "35.88",
-            "bid": 35.53,
-            "ask": 36.88,
-            "id": 66,
-            "changeRate": "-3.26%",
-            "open": "37.42"
+            "high": "0.48698",
+            "low": "0.47754",
+            "Ask": 0.49375,
+            "priceDecimals": 5,
+            "qtyDecimals": 5,
+            "id": 73,
+            "Bid": 0.47594,
+            "changeRate": "+1.52%",
+            "open": "0.47756",
+            "minQty": 4.70000000
         },
         {
+            "symbol": "ETC/CAD",
+            "last": "21.190",
+            "minTotal": 5.00000000,
             "volume": "0",
-            "symbol": "ANKR/CAD",
-            "high": "0.02778",
-            "last": "0.02667",
-            "low": "0.02625",
-            "bid": 0.02615,
-            "ask": 0.02719,
-            "id": 96,
-            "changeRate": "-1.87%",
-            "open": "0.02718"
+            "high": "21.219",
+            "low": "21.150",
+            "Ask": 21.578,
+            "priceDecimals": 3,
+            "qtyDecimals": 6,
+            "id": 81,
+            "Bid": 20.802,
+            "changeRate": "-0.01%",
+            "open": "21.194",
+            "minQty": 0.18000000
         },
         {
+            "symbol": "HBAR/CAD",
+            "last": "0.06588",
+            "minTotal": 5.00000000,
             "volume": "0",
-            "symbol": "LUNA2/USD",
-            "high": "0.63236",
-            "last": "0.60505",
-            "low": "0.60080",
-            "bid": 0.59314,
-            "ask": 0.61697,
-            "id": 125,
-            "changeRate": "-1.40%",
-            "open": "0.61367"
+            "high": "0.06593",
+            "low": "0.06559",
+            "Ask": 0.06715,
+            "priceDecimals": 5,
+            "qtyDecimals": 1,
+            "id": 115,
+            "Bid": 0.06462,
+            "changeRate": "-0.01%",
+            "open": "0.06589",
+            "minQty": 54.00000000
+        },
+        {
+            "symbol": "ICP/CAD",
+            "last": "5.522",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "5.554",
+            "low": "5.508",
+            "Ask": 5.631,
+            "priceDecimals": 3,
+            "qtyDecimals": 6,
+            "id": 131,
+            "Bid": 5.414,
+            "changeRate": "-0.55%",
+            "open": "5.553",
+            "minQty": 0.52000000
+        },
+        {
+            "symbol": "SAND/CAD",
+            "last": "0.5474",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "0.5475",
+            "low": "0.5428",
+            "Ask": 0.5575,
+            "priceDecimals": 4,
+            "qtyDecimals": 5,
+            "id": 94,
+            "Bid": 0.5373,
+            "changeRate": "+0.23%",
+            "open": "0.5461",
+            "minQty": 3.90000000
         }
     ],
     "success": true
@@ -604,112 +587,25 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### Response Parameters:
 
-| Parameter Name | Type    | Description                  |
-|----------------|---------|------------------------------|
-| volume         | String  | Volume                       |
-| symbol         | String  | Trading pairs                |
-| high           | String  | Highest market price         |
-| last           | String  | Market close price           |
-| low            | String  | Lowest market price          |
-| bid            | Decimal | Virgocx bid price            |
-| ask            | Decimal | Virgocx ask price            |
-| id             | Integer | Market Id                    |
-| changeRate     | String  | Change rate in last 24 hours |
-| open           | String  | Market open price            |
+| Parameter Name | Type    | Description                          |
+|----------------|---------|--------------------------------------|
+| volume         | String  | Volume                               |
+| symbol         | String  | Trading pairs                        |
+| high           | String  | Highest market price                 |
+| last           | String  | Market close price                   |
+| low            | String  | Lowest market price                  |
+| bid            | Decimal | Virgocx bid price                    |
+| ask            | Decimal | Virgocx ask price                    |
+| id             | Integer | Market Id                            |
+| changeRate     | String  | Change rate in last 24 hours         |
+| open           | String  | Market open price                    |
+| minQty         | Decimal | Minimum order quantity               |
+| priceDecimals  | Integer | The maximum accuracy of the price    |
+| qtyDecimals    | Integer | The maximum accuracy of the quantity |
+| minTotal       | Decimal | Minimum order amount                 |
 
 ---
-
-### 4. The latest completed history on the market
-
-<br>
-
-#### URL:
-
-> https://virgocx.ca/api/market/trade
-
-#### Request Method:
-
-> GET
-
-<br>
-
-#### Request Parameters:
-
-| Parameter Name | Required | Type   | Description                                                               |
-|----------------|----------|--------|---------------------------------------------------------------------------|
-| symbol         | Yes      | String | "/" needs to be added between the Market name and the Coin name (BTC/CAD) |
-
-#### Request example:
-> virgocx.ca/api/market/trade?symbol=BTC/CAD
-> 
-#### Response example:
-```
-{
-    "code": 0,
-    "msg": "success",
-    "data": {
-        "tradeList": [
-            {
-                "id": "12351556",
-                "qty": 0.028395650000000000,
-                "price": 34427.86,
-                "type": 1,
-                "createTime": 1686692928000,
-                "doublePrice": 34427.86
-            },
-            {
-                "id": "12351554",
-                "qty": 0.085952220000000000,
-                "price": 34903.110000000000000000,
-                "type": 1,
-                "createTime": 1686692690000,
-                "doublePrice": 34903.11
-            },
-            {
-                "id": "12351527",
-                "qty": 0.000700000000000000,
-                "price": 33942.280000000000000000,
-                "type": 2,
-                "createTime": 1686688931000,
-                "doublePrice": 33942.28
-            },
-            {
-                "id": "12351524",
-                "qty": 0.001369460000000000,
-                "price": 35057.510000000000000000,
-                "type": 1,
-                "createTime": 1686688822000,
-                "doublePrice": 35057.51
-            },
-            {
-                "id": "12351309",
-                "qty": 0.000200000000000000,
-                "price": 35220.000000000000000000,
-                "type": 2,
-                "createTime": 1686660953000,
-                "doublePrice": 35220.0
-            }
-        ],
-        "ts": 1686693389173
-    },
-    "success": true
-}
-```
-
-#### Response Parameters:
-
-| Parameter Name | Type    | Description                         |
-|----------------|---------|-------------------------------------|
-| id             | String  | Trade id                            |
-| qty            | Decimal | Quantity                            |
-| price          | Decimal | Price                               |
-| type           | Integer | 1 Buy, 2 Sell                       |
-| createTime     | Date    | Completion time in timeStamp format |
-| doublePrice    | Double  | Price in double format              |
-| ts             | Date    | Current timeStamp                   |
-
----
-### 5. Account information
+### 4. Account information
 
 <br>
 
@@ -757,15 +653,15 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "freezingBalance": 0.0000
         },
         {
-            "total": 0.0086,
-            "balance": 0.0086,
-            "coinName": "CAD",
+            "total": 0.0000,
+            "balance": 0.0000,
+            "coinName": "USDT",
             "freezingBalance": 0.0000
         },
         {
-            "total": 35.0994,
-            "balance": 35.0994,
-            "coinName": "ARB",
+            "total": 5.0086,
+            "balance": 5.0086,
+            "coinName": "CAD",
             "freezingBalance": 0.0000
         }
     ],
@@ -783,7 +679,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | coinName        | String  | Coin name                              |
 
 ---
-### 6. Query user orders
+### 5. Query user orders
 
 <br>
 
@@ -804,10 +700,10 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | apiKey         | Yes      | String  | User private key    |
 | sign           | Yes      | String  | Parameter signature |
 | symbol         | Yes      | String  | Trading pairs       |
-| status         | No       | Integer | Order status        |
 
 #### Request Example:
->https://virgocx.ca/api/member/queryOrder?apiKey=AAA&sign=BBB&symbol=BTC/CAD
+> https://virgocx.ca/api/member/queryOrder?apiKey=AAA&sign=BBB&symbol=BTC/CAD
+
 <br>
 
 >AAA: Your API key
@@ -820,174 +716,225 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
     "msg": "success",
     "data": [
         {
+            "total": null,
             "createTime": 1674687750000,
             "price": null,
             "qty": 0.002900000000000000,
             "tradeQty": 0.002900000000000000,
             "id": 5915781451,
+            "averagePrice": 30534.990000000000000000,
             "type": 2,
             "direction": 2,
+            "tradeTotal": null,
             "status": 3
         },
         {
+            "total": 17.360000000000000000,
             "createTime": 1672336597000,
             "price": null,
             "qty": null,
             "tradeQty": 0.000764740000000000,
             "id": 5915760672,
+            "averagePrice": 22700.230000000000000000,
             "type": 2,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 17.359773890200000000,
+            "status": 3
         },
         {
+            "total": 20.000000000000000000,
             "createTime": 1654058408000,
             "price": null,
             "qty": null,
             "tradeQty": 0.000497430000000000,
             "id": 5915467829,
+            "averagePrice": 40205.880000000000000000,
             "type": 3,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 19.999610888400000000,
+            "status": 3
         },
         {
+            "total": 16.080216000000000000,
             "createTime": 1654058381000,
             "price": 40200.540000000000000000,
             "qty": 0.000400000000000000,
             "tradeQty": 0E-18,
             "id": 5915467828,
+            "averagePrice": null,
             "type": 1,
             "direction": 1,
+            "tradeTotal": null,
             "status": -1
         },
         {
+            "total": 20.000000000000000000,
             "createTime": 1654058344000,
             "price": null,
             "qty": null,
             "tradeQty": 0.000497330000000000,
             "id": 5915467826,
+            "averagePrice": 40214.570000000000000000,
             "type": 2,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 19.999912098100000000,
+            "status": 3
         },
         {
+            "total": 30.000000000000000000,
             "createTime": 1653450306000,
             "price": null,
             "qty": null,
             "tradeQty": 0.000772020000000000,
             "id": 5915461772,
+            "averagePrice": 38859.030000000000000000,
             "type": 3,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 29.999948340600000000,
+            "status": 3
         },
         {
+            "total": 30.000000000000000000,
             "createTime": 1653449766000,
             "price": null,
             "qty": null,
             "tradeQty": 0.000774470000000000,
             "id": 5915461756,
+            "averagePrice": 38735.980000000000000000,
             "type": 3,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 29.999854430600000000,
+            "status": 3
         },
         {
+            "total": 100.000000000000000000,
             "createTime": 1653444675000,
             "price": null,
             "qty": null,
             "tradeQty": 0.002609770000000000,
             "id": 5915461681,
+            "averagePrice": 38317.420000000000000000,
             "type": 2,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 99.999653193400000000,
+            "status": 3
         },
         {
+            "total": 10.000000000000000000,
             "createTime": 1652726579000,
             "price": 20000.000000000000000000,
             "qty": 0.000500000000000000,
             "tradeQty": 0E-18,
             "id": 5915455405,
+            "averagePrice": null,
             "type": 1,
             "direction": 1,
+            "tradeTotal": null,
             "status": -1
         },
         {
+            "total": null,
             "createTime": 1625036965000,
             "price": 43199.700000000000000000,
             "qty": 0.003000000000000000,
             "tradeQty": 0.003000000000000000,
             "id": 4436825255,
+            "averagePrice": 43218.200000000000000000,
             "type": 1,
             "direction": 2,
+            "tradeTotal": null,
             "status": 3
         },
         {
+            "total": null,
             "createTime": 1625036896000,
             "price": 43622.800000000000000000,
             "qty": 0.001500000000000000,
             "tradeQty": 0.001500000000000000,
             "id": 4436822307,
+            "averagePrice": 43589.800000000000000000,
             "type": 1,
             "direction": 1,
+            "tradeTotal": null,
             "status": 3
         },
         {
+            "total": null,
             "createTime": 1623730191000,
             "price": 49338.800000000000000000,
             "qty": 0.000405300000000000,
             "tradeQty": 0.000405300000000000,
             "id": 4381482507,
+            "averagePrice": 49320.200000000000000000,
             "type": 1,
             "direction": 1,
+            "tradeTotal": null,
             "status": 3
         },
         {
+            "total": 20.000000000000000000,
             "createTime": 1623730156000,
             "price": null,
             "qty": null,
             "tradeQty": 0.000405360000000000,
             "id": 4381481013,
+            "averagePrice": 49338.800000000000000000,
             "type": 2,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 19.999975968000000000,
+            "status": 3
         },
         {
+            "total": null,
             "createTime": 1623220130000,
             "price": 40894.200000000000000000,
             "qty": 0.000300000000000000,
             "tradeQty": 0E-18,
             "id": 4359685388,
+            "averagePrice": null,
             "type": 1,
             "direction": 1,
+            "tradeTotal": null,
             "status": -1
         },
         {
+            "total": 10.000000000000000000,
             "createTime": 1623220058000,
             "price": null,
             "qty": null,
             "tradeQty": 0.000243430000000000,
             "id": 4359682287,
+            "averagePrice": 41078.100000000000000000,
             "type": 2,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 9.999641883000000000,
+            "status": 3
         },
         {
+            "total": null,
             "createTime": 1623219896000,
             "price": 41015.300000000000000000,
             "qty": 0.000300000000000000,
             "tradeQty": 0E-18,
             "id": 4359675356,
+            "averagePrice": null,
             "type": 1,
             "direction": 1,
+            "tradeTotal": null,
             "status": -1
         },
         {
+            "total": 30.900000000000000000,
             "createTime": 1619157775000,
             "price": null,
             "qty": null,
             "tradeQty": 0.000499170000000000,
             "id": 4100049844,
+            "averagePrice": 61902.100000000000000000,
             "type": 3,
             "direction": 1,
-            "status": -1
+            "tradeTotal": 30.899671257000000000,
+            "status": 3
         }
     ],
     "success": true
@@ -999,15 +946,18 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | Parameter Name | Type    | Description                                                    |
 |----------------|---------|----------------------------------------------------------------|
 | createTime     | Date    | Order create time                                              |
-| price          | Decimal | Order price                                                    |
-| qty            | Decimal | Order amount(qty)                                              |
-| tradeQty       | Decimal | Matched amount(qty)                                            |
+| price          | Decimal |                                                                |
+| qty            | Decimal |                                                                |
+| tradeQty       | Decimal |                                                                |
+| total          | Decimal |                                                                |
+| tradeTotal     | Decimal |                                                                |
+| averagePrice   | Decimal | Average price of order                                         |
 | id             | Integer | Order id                                                       |
 | type           | Integer | Order type, 1 Limit order, 2 Market order, 3 Quick trade order |
 | direction      | Integer | 1 Buy, 2 Sell                                                  |
 | status         | Integer | -1 Canceled, 0 Placed, 1 Open, 2 Matching, 3 Completed         |
 ---
-### 7. Query completed orders
+### 6. Query completed orders
 
 <br>
 
@@ -1051,8 +1001,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.002900000000000000,
             "price": 30534.990000000000000000,
             "type": "sell",
-            "createTime": "2023-01-26 07:02:31",
-            "createTimeMs": 1674687751
+            "createTime": 1674687751
         },
         {
             "id": "12230441",
@@ -1060,8 +1009,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000764740000000000,
             "price": 22700.230000000000000000,
             "type": "buy",
-            "createTime": "2022-12-30 01:56:38",
-            "createTimeMs": 1672336598
+            "createTime": 1672336598
         },
         {
             "id": "12080372",
@@ -1069,8 +1017,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000497430000000000,
             "price": 40205.880000000000000000,
             "type": "buy",
-            "createTime": "2022-06-01 12:40:08",
-            "createTimeMs": 1654058408
+            "createTime": 1654058408
         },
         {
             "id": "12080370",
@@ -1078,8 +1025,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000497330000000000,
             "price": 40214.570000000000000000,
             "type": "buy",
-            "createTime": "2022-06-01 12:39:04",
-            "createTimeMs": 1654058344
+            "createTime": 1654058344
         },
         {
             "id": "12075098",
@@ -1087,8 +1033,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000772020000000000,
             "price": 38859.030000000000000000,
             "type": "buy",
-            "createTime": "2022-05-25 11:45:06",
-            "createTimeMs": 1653450306
+            "createTime": 1653450306
         },
         {
             "id": "12075084",
@@ -1096,8 +1041,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000774470000000000,
             "price": 38735.980000000000000000,
             "type": "buy",
-            "createTime": "2022-05-25 11:36:06",
-            "createTimeMs": 1653449766
+            "createTime": 1653449766
         },
         {
             "id": "12075022",
@@ -1105,8 +1049,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.002609770000000000,
             "price": 38317.420000000000000000,
             "type": "buy",
-            "createTime": "2022-05-25 10:11:15",
-            "createTimeMs": 1653444675
+            "createTime": 1653444675
         },
         {
             "id": "11756653",
@@ -1114,8 +1057,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.003000000000000000,
             "price": 43218.200000000000000000,
             "type": "sell",
-            "createTime": "2021-06-30 15:09:24",
-            "createTimeMs": 1625036964
+            "createTime": 1625036964
         },
         {
             "id": "11756650",
@@ -1123,8 +1065,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.001500000000000000,
             "price": 43589.800000000000000000,
             "type": "buy",
-            "createTime": "2021-06-30 15:08:15",
-            "createTimeMs": 1625036895
+            "createTime": 1625036895
         },
         {
             "id": "11749196",
@@ -1132,8 +1073,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000405300000000000,
             "price": 49320.200000000000000000,
             "type": "buy",
-            "createTime": "2021-06-15 12:09:51",
-            "createTimeMs": 1623730191
+            "createTime": 1623730191
         },
         {
             "id": "11749194",
@@ -1141,8 +1081,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000405360000000000,
             "price": 49338.800000000000000000,
             "type": "buy",
-            "createTime": "2021-06-15 12:09:16",
-            "createTimeMs": 1623730156
+            "createTime": 1623730156
         },
         {
             "id": "11746584",
@@ -1150,8 +1089,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000243430000000000,
             "price": 41078.100000000000000000,
             "type": "buy",
-            "createTime": "2021-06-09 14:27:38",
-            "createTimeMs": 1623220058
+            "createTime": 1623220058
         },
         {
             "id": "11687269",
@@ -1159,8 +1097,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "qty": 0.000499170000000000,
             "price": 61902.100000000000000000,
             "type": "buy",
-            "createTime": "2021-04-23 14:02:55",
-            "createTimeMs": 1619157775
+            "createTime": 1619157775
         }
     ],
     "success": true
@@ -1177,9 +1114,8 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | price          | Decimal | Trading price                             |
 | type           | String  | buy or sell                               |
 | createTime     | String  | Completion time String format             |
-| createTimeMs   | Date    | Completion time timeStamp format          |
 ---
-### 8. Place Order
+### 7. Place Order
 
 <br>
 
@@ -1289,7 +1225,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | orderId        | String | Order Id    |
 ---
 
-### 9. Cancel Order
+### 8. Cancel Order
 
 <br>
 
@@ -1335,7 +1271,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### Response Parameters:NO
 
-### 10. Cancel Order
+### 9. Get discount price(bid && ask) depend on account's tier level
 
 <br>
 
@@ -1381,202 +1317,155 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 #### Response example(1):
 ```
 {
-    "code":0,
-    "msg":"success",
-    "data":[
+    "code": 0,
+    "msg": "success",
+    "data": [
         {
-            "volume":"0",
-            "symbol":"BTC/CAD",
-            "high":"33864.84",
-            "last":"33839.85",
-            "low":"33680.46",
-            "bid":33298.34,
-            "ask":34381.35,
-            "id":24,
-            "changeRate":"+0.08%",
-            "open":"33809.50"
+            "symbol": "BTC/CAD",
+            "last": "37978.01",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "38053.90",
+            "low": "37897.79",
+            "Ask": 38585.72,
+            "priceDecimals": 2,
+            "qtyDecimals": 4,
+            "id": 24,
+            "Bid": 37370.29,
+            "changeRate": "+0.10%",
+            "open": "37938.54",
+            "minQty": 0.00018000
         },
         {
-            "volume":"0",
-            "symbol":"ETH/CAD",
-            "high":"2215.85",
-            "last":"2209.03",
-            "low":"2203.67",
-            "bid":2173.67,
-            "ask":2244.38,
-            "id":25,
-            "changeRate":"+0.21%",
-            "open":"2204.26"
+            "symbol": "ETH/CAD",
+            "last": "2396.51",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "2398.31",
+            "low": "2389.47",
+            "Ask": 2434.85,
+            "priceDecimals": 2,
+            "qtyDecimals": 3,
+            "id": 25,
+            "Bid": 2358.15,
+            "changeRate": "+0.11%",
+            "open": "2393.82",
+            "minQty": 0.00200000
         },
         {
-            "volume":"0",
-            "symbol":"USDC/CAD",
-            "high":"1.3239",
-            "last":"1.3229",
-            "low":"1.3213",
-            "bid":1.3016,
-            "ask":1.344,
-            "id":55,
-            "changeRate":"-0.02%",
-            "open":"1.3232"
+            "symbol": "USDC/CAD",
+            "last": "1.3213",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "1.3220",
+            "low": "1.3212",
+            "Ask": 1.3424,
+            "priceDecimals": 4,
+            "qtyDecimals": 4,
+            "id": 55,
+            "Bid": 1.3000,
+            "changeRate": "-0.05%",
+            "open": "1.3220",
+            "minQty": 4.00000000
         },
         {
-            "volume":"0",
-            "symbol":"ADA/CAD",
-            "high":"0.349570",
-            "last":"0.346358",
-            "low":"0.345384",
-            "bid":0.340731,
-            "ask":0.351984,
-            "id":68,
-            "changeRate":"-0.61%",
-            "open":"0.348490"
+            "symbol": "ADA/CAD",
+            "last": "0.368747",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "0.371880",
+            "low": "0.368474",
+            "Ask": 0.374725,
+            "priceDecimals": 6,
+            "qtyDecimals": 2,
+            "id": 68,
+            "Bid": 0.362767,
+            "changeRate": "-0.67%",
+            "open": "0.371239",
+            "minQty": 7.50000000
         },
         {
-            "volume":"0",
-            "symbol":"SOL/CAD",
-            "high":"19.76",
-            "last":"19.62",
-            "low":"19.47",
-            "bid":19.29,
-            "ask":19.93,
-            "id":75,
-            "changeRate":"+0.15%",
-            "open":"19.59"
+            "symbol": "SOL/CAD",
+            "last": "22.13",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "22.17",
+            "low": "22.07",
+            "Ask": 22.48,
+            "priceDecimals": 2,
+            "qtyDecimals": 6,
+            "id": 75,
+            "Bid": 21.76,
+            "changeRate": "+0.00%",
+            "open": "22.13",
+            "minQty": 0.12000000
         },
         {
-            "volume":"0",
-            "symbol":"AVAX/CAD",
-            "high":"15.20",
-            "last":"15.11",
-            "low":"15.07",
-            "bid":14.85,
-            "ask":15.35,
-            "id":79,
-            "changeRate":"-0.46%",
-            "open":"15.18"
+            "symbol": "AVAX/CAD",
+            "last": "16.25",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "16.26",
+            "low": "16.19",
+            "Ask": 16.51,
+            "priceDecimals": 2,
+            "qtyDecimals": 6,
+            "id": 79,
+            "Bid": 15.97,
+            "changeRate": "+0.06%",
+            "open": "16.24",
+            "minQty": 0.14000000
         },
         {
-            "volume":"0",
-            "symbol":"DOT/CAD",
-            "high":"5.8133",
-            "last":"5.7906",
-            "low":"5.7681",
-            "bid":5.6976,
-            "ask":5.8834,
-            "id":69,
-            "changeRate":"-0.08%",
-            "open":"5.7956"
+            "symbol": "DOT/CAD",
+            "last": "6.2197",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "6.2479",
+            "low": "6.2175",
+            "Ask": 6.3205,
+            "priceDecimals": 4,
+            "qtyDecimals": 3,
+            "id": 69,
+            "Bid": 6.1187,
+            "changeRate": "-0.40%",
+            "open": "6.2452",
+            "minQty": 0.45000000
         },
         {
-            "volume":"0",
-            "symbol":"DOGE/CAD",
-            "high":"0.0821072",
-            "last":"0.0817154",
-            "low":"0.0814499",
-            "bid":0.0804001,
-            "ask":0.0830306,
-            "id":57,
-            "changeRate":"+0.11%",
-            "open":"0.0816216"
+            "symbol": "DOGE/CAD",
+            "last": "0.0844076",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "0.0845970",
+            "low": "0.0842134",
+            "Ask": 0.0857643,
+            "priceDecimals": 7,
+            "qtyDecimals": 1,
+            "id": 57,
+            "Bid": 0.0830507,
+            "changeRate": "-0.22%",
+            "open": "0.0845964",
+            "minQty": 60.00000000
         },
         {
-            "volume":"0",
-            "symbol":"SHIB/CAD",
-            "high":"0.00000897",
-            "last":"0.00000892",
-            "low":"0.00000891",
-            "bid":0.00000876,
-            "ask":0.00000907,
-            "id":76,
-            "changeRate":"-0.22%",
-            "open":"0.00000894"
+            "symbol": "SHIB/CAD",
+            "last": "0.00000978",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "0.00000978",
+            "low": "0.00000973",
+            "Ask": 0.00000993,
+            "priceDecimals": 8,
+            "qtyDecimals": 0,
+            "id": 76,
+            "Bid": 0.00000961,
+            "changeRate": "+0.30%",
+            "open": "0.00000975",
+            "minQty": 342745.00000000
         },
-        {
-            "volume":"0",
-            "symbol":"MATIC/CAD",
-            "high":"0.7857",
-            "last":"0.7803",
-            "low":"0.7758",
-            "bid":0.7677,
-            "ask":0.7928,
-            "id":71,
-            "changeRate":"-0.01%",
-            "open":"0.7804"
-        },
-        {
-            "volume":"0",
-            "symbol":"ARB/CAD",
-            "high":"1.2732",
-            "last":"1.2651",
-            "low":"1.2506",
-            "bid":1.2419,
-            "ask":1.2881,
-            "id":536,
-            "changeRate":"+0.50%",
-            "open":"1.2588"
-        },
-        {
-            "volume":"0",
-            "symbol":"ATOM/CAD",
-            "high":"11.6602",
-            "last":"11.6381",
-            "low":"11.5358",
-            "bid":11.4264,
-            "ask":11.8497,
-            "id":74,
-            "changeRate":"+0.87%",
-            "open":"11.5369"
-        },
-        {
-            "volume":"0",
-            "symbol":"IMX/CAD",
-            "high":"0.811",
-            "last":"0.802",
-            "low":"0.798",
-            "bid":0.785,
-            "ask":0.817,
-            "id":529,
-            "changeRate":"-0.98%",
-            "open":"0.810"
-        },
-        {
-            "volume":"0",
-            "symbol":"LTC/CAD",
-            "high":"99.95",
-            "last":"99.73",
-            "low":"99.00",
-            "bid":98.12,
-            "ask":101.33,
-            "id":30,
-            "changeRate":"+0.23%",
-            "open":"99.50"
-        },
-        {
-            "volume":"0",
-            "symbol":"LDO/CAD",
-            "high":"2.301",
-            "last":"2.275",
-            "low":"2.257",
-            "bid":2.232,
-            "ask":2.316,
-            "id":530,
-            "changeRate":"+0.30%",
-            "open":"2.268"
-        },
-        {
-            "volume":"0",
-            "symbol":"LINK/CAD",
-            "high":"7.01392",
-            "last":"6.96103",
-            "low":"6.95325",
-            "bid":6.83425,
-            "ask":7.0878,
-            "id":60,
-            "changeRate":"-0.58%",
-            "open":"7.00166"
-        }
-    ]
+    ],
+    "success": true
 }
 ```
 #### Response example(2):
@@ -1586,16 +1475,20 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
     "msg": "success",
     "data": [
         {
-            "volume": "0",
             "symbol": "ETH/CAD",
-            "high": "2242.26",
-            "last": "2240.76",
-            "low": "2177.84",
-            "bid": 2204.70,
-            "ask": 2276.80,
+            "last": "2399.25",
+            "minTotal": 5.00000000,
+            "volume": "0",
+            "high": "2401.52",
+            "low": "2389.47",
+            "Ask": 2437.64,
+            "priceDecimals": 2,
+            "qtyDecimals": 3,
             "id": 25,
-            "changeRate": "+1.65%",
-            "open": "2204.26"
+            "Bid": 2360.85,
+            "changeRate": "+0.22%",
+            "open": "2393.82",
+            "minQty": 0.00200000
         }
     ],
     "success": true
@@ -1603,17 +1496,21 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 ```
 #### Response Parameters:
 
-| Parameter Name | Type    | Description                  |
-|----------------|---------|------------------------------|
-| volume         | String  | Volume                       |
-| symbol         | String  | Trading pairs                |
-| high           | String  | Highest market price         |
-| last           | String  | Market close price           |
-| low            | String  | Lowest market price          |
-| bid            | Decimal | Virgocx bid price            |
-| ask            | Decimal | Virgocx ask price            |
-| id             | Integer | Market id                    |
-| changeRate     | String  | Change rate in past 24 hours |
-| open           | String  | Market open price            |
+| Parameter Name | Type    | Description                          |
+|----------------|---------|--------------------------------------|
+| volume         | String  | Volume                               |
+| symbol         | String  | Trading pairs                        |
+| high           | String  | Highest market price                 |
+| last           | String  | Market close price                   |
+| low            | String  | Lowest market price                  |
+| bid            | Decimal | Virgocx bid price                    |
+| ask            | Decimal | Virgocx ask price                    |
+| id             | Integer | Market id                            |
+| changeRate     | String  | Change rate in past 24 hours         |
+| open           | String  | Market open price                    |
+| minQty         | Decimal | Minimum order quantity               |
+| priceDecimals  | Integer | The maximum accuracy of the price    |
+| qtyDecimals    | Integer | The maximum accuracy of the quantity |
+| minTotal       | Decimal | Minimum order amount                 |
 
 ---
