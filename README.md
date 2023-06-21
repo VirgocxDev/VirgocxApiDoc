@@ -784,18 +784,18 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | Parameter Name | Type    | Description                                                    |
 |----------------|---------|----------------------------------------------------------------|
 | createTime     | Date    | Order create time                                              |
-| price          | Decimal |                                                                |
-| qty            | Decimal |                                                                |
-| tradeQty       | Decimal |                                                                |
-| total          | Decimal |                                                                |
-| tradeTotal     | Decimal |                                                                |
+| price          | Decimal | Limit order price                                              |
+| qty            | Decimal | Order quantity                                                 |
+| tradeQty       | Decimal | Actually filled quantity                                       |
+| total          | Decimal | qty * price or order amount of market order                    |
+| tradeTotal     | Decimal | tradeQty * price                                               |
 | averagePrice   | Decimal | Average price of order                                         |
 | id             | Integer | Order id                                                       |
 | type           | Integer | Order type, 1 Limit order, 2 Market order, 3 Quick trade order |
 | direction      | Integer | 1 Buy, 2 Sell                                                  |
 | status         | Integer | -1 Canceled, 0 Placed, 1 Open, 2 Matching, 3 Completed         |
 ---
-### 6. Query completed orders
+### 6. Query user trades
 
 <br>
 
