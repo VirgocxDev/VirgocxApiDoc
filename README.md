@@ -700,15 +700,18 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | apiKey         | Yes      | String  | User private key    |
 | sign           | Yes      | String  | Parameter signature |
 | symbol         | Yes      | String  | Trading pairs       |
+| status         | Optional | Integer | Order status        |
 
 #### Request Example:
-> https://virgocx.ca/api/member/queryOrder?apiKey=AAA&sign=BBB&symbol=BTC/CAD
+> https://virgocx.ca/api/member/queryOrder?apiKey=AAA&sign=BBB&symbol=BTC/CAD&status=3
 
 <br>
 
 >AAA: Your API key
 
 >BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
+
+>status: Hope to search completed orders
 #### Response example:
 ```
 {
@@ -727,110 +730,6 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "direction": 2,
             "tradeTotal": null,
             "status": 3
-        },
-        {
-            "total": 17.360000000000000000,
-            "createTime": 1672336597000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.000764740000000000,
-            "id": 5915760672,
-            "averagePrice": 22700.230000000000000000,
-            "type": 2,
-            "direction": 1,
-            "tradeTotal": 17.359773890200000000,
-            "status": 3
-        },
-        {
-            "total": 20.000000000000000000,
-            "createTime": 1654058408000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.000497430000000000,
-            "id": 5915467829,
-            "averagePrice": 40205.880000000000000000,
-            "type": 3,
-            "direction": 1,
-            "tradeTotal": 19.999610888400000000,
-            "status": 3
-        },
-        {
-            "total": 16.080216000000000000,
-            "createTime": 1654058381000,
-            "price": 40200.540000000000000000,
-            "qty": 0.000400000000000000,
-            "tradeQty": 0E-18,
-            "id": 5915467828,
-            "averagePrice": null,
-            "type": 1,
-            "direction": 1,
-            "tradeTotal": null,
-            "status": -1
-        },
-        {
-            "total": 20.000000000000000000,
-            "createTime": 1654058344000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.000497330000000000,
-            "id": 5915467826,
-            "averagePrice": 40214.570000000000000000,
-            "type": 2,
-            "direction": 1,
-            "tradeTotal": 19.999912098100000000,
-            "status": 3
-        },
-        {
-            "total": 30.000000000000000000,
-            "createTime": 1653450306000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.000772020000000000,
-            "id": 5915461772,
-            "averagePrice": 38859.030000000000000000,
-            "type": 3,
-            "direction": 1,
-            "tradeTotal": 29.999948340600000000,
-            "status": 3
-        },
-        {
-            "total": 30.000000000000000000,
-            "createTime": 1653449766000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.000774470000000000,
-            "id": 5915461756,
-            "averagePrice": 38735.980000000000000000,
-            "type": 3,
-            "direction": 1,
-            "tradeTotal": 29.999854430600000000,
-            "status": 3
-        },
-        {
-            "total": 100.000000000000000000,
-            "createTime": 1653444675000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.002609770000000000,
-            "id": 5915461681,
-            "averagePrice": 38317.420000000000000000,
-            "type": 2,
-            "direction": 1,
-            "tradeTotal": 99.999653193400000000,
-            "status": 3
-        },
-        {
-            "total": 10.000000000000000000,
-            "createTime": 1652726579000,
-            "price": 20000.000000000000000000,
-            "qty": 0.000500000000000000,
-            "tradeQty": 0E-18,
-            "id": 5915455405,
-            "averagePrice": null,
-            "type": 1,
-            "direction": 1,
-            "tradeTotal": null,
-            "status": -1
         },
         {
             "total": null,
@@ -869,71 +768,6 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
             "type": 1,
             "direction": 1,
             "tradeTotal": null,
-            "status": 3
-        },
-        {
-            "total": 20.000000000000000000,
-            "createTime": 1623730156000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.000405360000000000,
-            "id": 4381481013,
-            "averagePrice": 49338.800000000000000000,
-            "type": 2,
-            "direction": 1,
-            "tradeTotal": 19.999975968000000000,
-            "status": 3
-        },
-        {
-            "total": null,
-            "createTime": 1623220130000,
-            "price": 40894.200000000000000000,
-            "qty": 0.000300000000000000,
-            "tradeQty": 0E-18,
-            "id": 4359685388,
-            "averagePrice": null,
-            "type": 1,
-            "direction": 1,
-            "tradeTotal": null,
-            "status": -1
-        },
-        {
-            "total": 10.000000000000000000,
-            "createTime": 1623220058000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.000243430000000000,
-            "id": 4359682287,
-            "averagePrice": 41078.100000000000000000,
-            "type": 2,
-            "direction": 1,
-            "tradeTotal": 9.999641883000000000,
-            "status": 3
-        },
-        {
-            "total": null,
-            "createTime": 1623219896000,
-            "price": 41015.300000000000000000,
-            "qty": 0.000300000000000000,
-            "tradeQty": 0E-18,
-            "id": 4359675356,
-            "averagePrice": null,
-            "type": 1,
-            "direction": 1,
-            "tradeTotal": null,
-            "status": -1
-        },
-        {
-            "total": 30.900000000000000000,
-            "createTime": 1619157775000,
-            "price": null,
-            "qty": null,
-            "tradeQty": 0.000499170000000000,
-            "id": 4100049844,
-            "averagePrice": 61902.100000000000000000,
-            "type": 3,
-            "direction": 1,
-            "tradeTotal": 30.899671257000000000,
             "status": 3
         }
     ],
