@@ -26,6 +26,10 @@ step-1:Sort the update parameters list by initial.
     "type":1
 }
 
+If the first character is same, continue to compare next one,until see the difference,for example, apiKey and apiSecret,
+the fourth character is different, character K front of character S, so apiKey is front of apiSecret in the parameter list
+when calculate MD5 hash.
+
 step-2:Generate the character string by putting them together. 
 Get: AAAAABBBBB19000.11.2BTC/CAD1
 
