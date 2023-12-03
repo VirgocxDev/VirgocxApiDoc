@@ -39,297 +39,26 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
     "marketSymbol":"BTC/CAD"
 }
 ```
-
-
-### 1. K-line Data (candlestick chart)
-
-<br>
+### 1. Market Price Change Info
 
 #### URL:
 
-> https://virgocx.ca/api/market/history/kline
+> https://casnapliitest.virgocx.ca/v2/snaplii/getByMarketSymbol?apiKey=94e1cef3531c41bdbd420fc49359f5f2&sign=3d14adf8addcb373801229f2b97d6b32&marketSymbol=BTC/CAD
 
 #### Request Method:
 
 > GET
 
-<br>
-
 #### Request Parameters:
 
-| Parameter Name | Required | Type    | Description                                                                                                                      |
-|----------------|----------|---------|----------------------------------------------------------------------------------------------------------------------------------|
-| symbol         | Yes      | String  | Trading pairs,for example: ETH/CAD                                                                                               |
-| period         | Yes      | Integer | K-Line Type (1 minutes-1, 5 minutes-5,10 minutes-10,30 minutes-30,1hr-60,4hrs-240,1day-1440,5days-7200,1week-10080,1month-43200) |
-
-<br>
-
+| Parameter Name | Required | Type   | Description                      |
+|----------------|----------|--------|----------------------------------|
+| apiKey         | Yes      | String | Non-production API Key See Above |
+| sign           | Yes      | String | See Above example                |
+| marketSymbol   | Yes      | String | BTC/CAD,ETH/CAD,DOGE/CAD         |
 
 ### Request Example:
-> https://virgocx.ca/api/market/history/kline?symbol=ETH/CAD&period=43200
-
-### Response Example:
-```
-
-{
-    "code": 0,
-    "msg": "success",
-    "data": [
-        {
-            "id": 85665,
-            "country": 1,
-            "marketId": 25,
-            "open": 401.0,
-            "high": 475.95,
-            "low": 360.65,
-            "close": 388.3,
-            "createTime": 1559318400000
-        },
-        {
-            "id": 408678,
-            "country": 1,
-            "marketId": 25,
-            "open": 387.06,
-            "high": 416.59,
-            "low": 252.5,
-            "close": 285.49,
-            "createTime": 1561910400000
-        },
-        {
-            "id": 806012,
-            "country": 1,
-            "marketId": 25,
-            "open": 285.72,
-            "high": 315.69,
-            "low": 219.61,
-            "close": 223.87,
-            "createTime": 1564588800000
-        },
-        {
-            "id": 1345976,
-            "country": 1,
-            "marketId": 25,
-            "open": 223.89,
-            "high": 418.8,
-            "low": 202.23,
-            "close": 237.32,
-            "createTime": 1567267200000
-        },
-        {
-            "id": 1960838,
-            "country": 1,
-            "marketId": 25,
-            "open": 237.13,
-            "high": 259.89,
-            "low": 208.99,
-            "close": 239.54,
-            "createTime": 1569859200000
-        },
-        {
-            "id": 2641817,
-            "country": 1,
-            "marketId": 25,
-            "open": 239.61,
-            "high": 255.87,
-            "low": 175.78,
-            "close": 201.8,
-            "createTime": 1572537600000
-        },
-        {
-            "id": 3369813,
-            "country": 1,
-            "marketId": 25,
-            "open": 201.56,
-            "high": 202.98,
-            "low": 152.79,
-            "close": 167.82,
-            "createTime": 1575129600000
-        },
-        {
-            "id": 3848988,
-            "country": 1,
-            "marketId": 25,
-            "open": 167.91,
-            "high": 246.32,
-            "low": 162.72,
-            "close": 237.77,
-            "createTime": 1577808000000
-        },
-        {
-            "id": 4070825,
-            "country": 1,
-            "marketId": 25,
-            "open": 237.82,
-            "high": 382.72,
-            "low": 234.92,
-            "close": 301.2,
-            "createTime": 1580486400000
-        },
-        {
-            "id": 4284913,
-            "country": 1,
-            "marketId": 25,
-            "open": 300.04,
-            "high": 309.66,
-            "low": 145.0,
-            "close": 187.84,
-            "createTime": 1582992000000
-        },
-        {
-            "id": 4633451,
-            "country": 1,
-            "marketId": 25,
-            "open": 187.92,
-            "high": 315.15,
-            "low": 183.41,
-            "close": 289.99,
-            "createTime": 1585670400000
-        },
-        {
-            "id": 4996227,
-            "country": 1,
-            "marketId": 25,
-            "open": 289.49,
-            "high": 339.67,
-            "low": 247.86,
-            "close": 321.68,
-            "createTime": 1588262400000
-        },
-        {
-            "id": 5347054,
-            "country": 1,
-            "marketId": 25,
-            "open": 321.04,
-            "high": 342.42,
-            "low": 296.0,
-            "close": 307.68,
-            "createTime": 1590940800000
-        },
-        {
-            "id": 5709609,
-            "country": 1,
-            "marketId": 25,
-            "open": 307.92,
-            "high": 466.95,
-            "low": 303.03,
-            "close": 461.41,
-            "createTime": 1593532800000
-        },
-        {
-            "id": 6063986,
-            "country": 1,
-            "marketId": 25,
-            "open": 496.65,
-            "high": 588.86,
-            "low": 487.03,
-            "close": 520.19,
-            "createTime": 1596214800000
-        },
-        {
-            "id": 6531682,
-            "country": 1,
-            "marketId": 25,
-            "open": 461.7,
-            "high": 527.43,
-            "low": 426.45,
-            "close": 471.06,
-            "createTime": 1598893200000
-        },
-        {
-            "id": 7073396,
-            "country": 1,
-            "marketId": 25,
-            "open": 470.08,
-            "high": 552.09,
-            "low": 443.9,
-            "close": 543.83,
-            "createTime": 1601485200000
-        },
-        {
-            "id": 7568326,
-            "country": 1,
-            "marketId": 25,
-            "open": 518.81,
-            "high": 810.71,
-            "low": 493.82,
-            "close": 688.33,
-            "createTime": 1604163600000
-        },
-        {
-            "id": 8100966,
-            "country": 1,
-            "marketId": 25,
-            "open": 762.37,
-            "high": 848.59,
-            "low": 687.3,
-            "close": 808.68,
-            "createTime": 1606755600000
-        },
-        {
-            "id": 8711518,
-            "country": 1,
-            "marketId": 25,
-            "open": 1169.55,
-            "high": 1828.36,
-            "low": 1169.55,
-            "close": 1566.82,
-            "createTime": 1609434000000
-        },
-        {
-            "id": 9318087,
-            "country": 1,
-            "marketId": 25,
-            "open": 1674.46,
-            "high": 2572.31,
-            "low": 1640.68,
-            "close": 2572.31,
-            "createTime": 1612112400000
-        }
-    ],
-    "success": true
-}
-```
-
-#### Response Parameters:
-
-| Parameter Name | Type    | Description          |
-|----------------|---------|----------------------|
-| id             | Integer | K-Line record id     |
-| country        | Integer | Country id, Canada:1 |
-| marketId       | Integer | Market id            |
-| open           | Decimal | Market open price    |
-| high           | Decimal | Highest market price |
-| low            | Decimal | Lowest market price  |
-| close          | Decimal | Market close price   |
-| createTime     | Date    | K-Line create Time   |
-
----
-
-### 2. Ticker Matching
-
-<br>
-
-#### URL:
-
-> https://virgocx.ca/api/market/detail/merged
-
-#### Request Method:
-
-> GET
-
-<br>
-
-#### Request Parameters:
-
-| Parameter Name | Required | Type   | Description                                                               |
-|----------------|----------|--------|---------------------------------------------------------------------------|
-| symbol         | Yes      | String | "/" needs to be added between the Market name and the Coin name (ETH/CAD) |
-
-<br>
-
-#### Request Example:
-> https://virgocx.ca/api/market/detail/merged?symbol=ETH/CAD
-
+> https://casnapliitest.virgocx.ca/v2/snaplii/getByMarketSymbol?apiKey=94e1cef3531c41bdbd420fc49359f5f2&sign=3d14adf8addcb373801229f2b97d6b32&marketSymbol=BTC/CAD
 
 ### Response Example:
 ```
@@ -337,116 +66,114 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
     "code": 0,
     "msg": "success",
     "data": {
-        "symbol": "ETH/CAD",
-        "last": "2400.24",
-        "minTotal": 5.00000000,
-        "volume": "0",
-        "high": "2401.78",
-        "low": "2389.47",
-        "Ask": 2438.75,
-        "priceDecimals": 2,
-        "qtyDecimals": 3,
-        "id": 25,
-        "Bid": 2361.73,
-        "changeRate": "+0.26%",
-        "open": "2393.82",
-        "minQty": 0.00200000
+        "symbol": "BTC/CAD",
+        "high": "51220.97",
+        "buyOne": "39299.09",
+        "last": "50437.11",
+        "low": "50093.90",
+        "changeRate": "-1.31%",
+        "sellOne": "40577.21"
     },
     "success": true
 }
 ```
 #### Response Parameters:
 
-| Parameter Name | Type    | Description                          |
-|----------------|---------|--------------------------------------|
-| volume         | String  | Volume                               |
-| symbol         | String  | Trading pairs                        |
-| high           | String  | Highest market price                 |
-| last           | String  | Market close price                   |
-| low            | String  | Lowest market price                  |
-| bid            | Decimal | Virgocx bid price                    |
-| ask            | Decimal | Virgocx ask price                    |
-| id             | Integer | Market id                            |
-| changeRate     | String  | Change rate in last 24 hours         |
-| open           | String  | Market open price                    |
-| minQty         | Decimal | Minimum order quantity               |
-| priceDecimals  | Integer | The maximum accuracy of the price    |
-| qtyDecimals    | Integer | The maximum accuracy of the quantity |
-| minTotal       | Decimal | Minimum order amount                 |
+| Parameter Name | Type   | Description                                 |
+|----------------|--------|---------------------------------------------|
+| symbol         | String | Market Name                                 |
+| high           | String | last 24 hours highest price,real time value |
+| last           | String | last trade price                            |
+| low            | String | last 24 hours lowest price,real time value  |
+| changeRate     | String | last 24 hours change rate, real time value  |
+| sellOne        | String | latest sell order price on Virgo            |
+| buyOne         | String | latest buy order price on Virgo             |
 ---
+#### Note: If need more info return by this API, contact us, data is real time, call this API up to your design.
 
-
-### 4. Account information
-
-<br>
+### 2. Coin Price Chart(K-line)
 
 #### URL:
 
-> https://virgocx.ca/api/member/accounts
+>https://casnapliitest.virgocx.ca/v2/snaplii/findListByMarketId?apiKey=94e1cef3531c41bdbd420fc49359f5f2&sign=227c5febaa6c6a9fae80c3d61d71dd12&marketId=24&minType=1440
 
 #### Request Method:
 
 > GET
 
-<br>
-
 #### Request Parameters:
 
-| Parameter Name | Required | Type   | Description         |
-|----------------|----------|--------|---------------------|
-| apiKey         | Yes      | String | Api Key             |
-| sign           | Yes      | String | Parameter signature |
-
-#### Request Example:
-> https://virgocx.ca/api/member/accounts?apiKey=AAA&sign=BBB
+| Parameter Name | Required | Type    | Description                                                      |
+|----------------|----------|---------|------------------------------------------------------------------|
+| apiKey         | Yes      | String  | Non-production API Key See Above                                 |
+| sign           | Yes      | String  | See Above example                                                |
+| marketId       | Yes      | Integer | fix value 24,if support more coins later, we can provide new API |
+| minType        | Yes      | Integer | See notes in the notes                                           |
 <br>
 
->AAA: Your API key
+#### Request Example:
+> https://casnapliitest.virgocx.ca/v2/snaplii/findListByMarketId?apiKey=94e1cef3531c41bdbd420fc49359f5f2&sign=227c5febaa6c6a9fae80c3d61d71dd12&marketId=24&minType=1440
 
->BBB: Sign calculated by MD5,for example:b60743ad70bad7d1fc47777c0d58604e
-
-#### Response example:
+### Response Example:
 ```
 {
     "code": 0,
     "msg": "success",
     "data": [
         {
-            "total": 0.0006,
-            "balance": 0.0006,
-            "coinName": "ETH",
-            "freezingBalance": 0.0000
+            "id": 242728,
+            "country": 1,
+            "marketId": 24,
+            "open": 36037.1,
+            "high": 37012.15,
+            "low": 35904.1,
+            "close": 36147.66,
+            "createTime": 1695009600000
         },
         {
-            "total": 0.0031,
-            "balance": 0.0031,
-            "coinName": "BTC",
-            "freezingBalance": 0.0000
-        },
-        {
-            "total": 0.0000,
-            "balance": 0.0000,
-            "coinName": "USDT",
-            "freezingBalance": 0.0000
-        },
-        {
-            "total": 5.0086,
-            "balance": 5.0086,
-            "coinName": "CAD",
-            "freezingBalance": 0.0000
+            "id": 258407,
+            "country": 1,
+            "marketId": 24,
+            "open": 36089.23,
+            "high": 36952.64,
+            "low": 35956.23,
+            "close": 36582.23,
+            "createTime": 1695081600000
         }
     ],
     "success": true
 }
 ```
-
 #### Response Parameters:
 
-| Parameter Name  | Type    | Description                            |
-|-----------------|---------|----------------------------------------|
-| freezingBalance | Decimal | Frozen balance                         |
-| total           | Decimal | Total balance(balance+freezingBalance) |
-| balance         | Decimal | Balance (available balance)            |
-| coinName        | String  | Coin name                              |
-
+| Parameter Name | Type    | Description                                               |
+|----------------|---------|-----------------------------------------------------------|
+| id             | Integer | Record Id in our side                                     |
+| country        | String  | Country ID                                                |
+| marketId       | String  | Market ID of BTC/CAD                                      |
+| open           | String  | Open price for that k-line data (1 hour in this example)  |
+| high           | String  | high price for that k-line data (1 hour in this example)  |
+| low            | Decimal | low price for that k-line data (1 hour in this example)   |
+| close          | Decimal | close price for that k-line data (1 hour in this example) |
+| createTime     | Integer | k-line creation time                                      |
 ---
+#### 
+Note:
+* (1) 
+* value list of minType
+* minType 1, 1 minute
+* minType 5, 5 minutes
+* minType 10, 10 minutes
+* minType 30, 30 minutes
+* minType 60, 1 hour
+* minType 240, 4 hours
+* minType 1440, 1 day
+* minType 10080, 1 week
+* minType 43200, 1 month
+* (2)
+* if need we provide this page embed to your app, let us know, we can do that and provide you a page include related info. This API provide you
+another choice to show BTC price change.
+---
+### 3. Redeem points to BTC(update On ASAP)
+
+### 4. Detect user from Snaplii(update On ASAP)
