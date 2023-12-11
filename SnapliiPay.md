@@ -179,6 +179,59 @@ Note:
 another choice to show BTC price change.
 ---
 ### 3. Redeem points to BTC(update On ASAP)
+#### URL:
+
+>https://casnapliitest.virgocx.ca/v2/snaplii/redeemPoints
+
+>https://casnapliitest.virgocx.ca/v2/app/snaplii/redeemPoints
+#### Request Method:
+
+> GET
+
+#### Request Parameters:
+
+| Parameter Name | Required | Type    | Description                      |
+|----------------|----------|---------|----------------------------------|
+| apiKey         | Yes      | String  | Non-production API Key See Above |
+| sign           | Yes      | String  | See Above example                |
+| userId         | Yes      | String  | User Id on Virgo Side            |
+| points         | Yes      | Integer | Amount of redeem points          |
+<br>
+
+#### Request Example:
+> https://casnapliitest.virgocx.ca/v2/snaplii/redeemPoints?apiKey=94e1cef3531c41bdbd420fc49359f5f2&sign=1bb9c04a922d0e85dcfd4b1ae244d703&userId=180106745&points=5000
+
+### Response Example:
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "snapliiUserId": 180103132,
+        "snapliiBalance": "300.0105305",
+        "redeemUserId": 180106745,
+        "redeemUserBalance": "21.79454698"
+    },
+    "success": true
+}
+```
+#### Response Parameters:
+
+| Parameter Name    | Type    | Description                                     |
+|-------------------|---------|-------------------------------------------------|
+| snapliiUserId     | Integer | Snaplii User ID on our side                     |
+| snapliiBalance    | String  | BTC balance after client redeem points (reduce) |
+| redeemUserId      | Integer | Redeem User ID on our side                      |
+| redeemUserBalance | String  | BTC balance after redeem points (add)           |
+
+
+#### 
+Note:
+* (1)
+  If need more details in the response, we can discuss later.
+* (2)
+  Rate of points to btc should discuss later with our head of product Andy.
+---
 
 ### 4. Detect user from Snaplii(update On ASAP)
 
