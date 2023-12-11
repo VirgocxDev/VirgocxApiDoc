@@ -1,4 +1,4 @@
-# Snaplii API DOCS Version-0.0.1
+# Snaplii API DOCS Version-0.0.2
 
 ### Get API Authorization
 
@@ -32,7 +32,7 @@ step-3:Execute MD5 algorithm.
 md5(94e1cef3531c41bdbd420fc49359f5f2881a0e2413044015b64acd59cf295864BTC/CAD)
 Get: 3d14adf8addcb373801229f2b97d6b32
 
-step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder.
+step-4:Final parameters list used to call https://casnapliitest.virgocx.ca/v2/snaplii/getByMarketSymbol.
 {
     "apiKey":"94e1cef3531c41bdbd420fc49359f5f2",
     "sign":"b60743ad70bad7d1fc47777c0d58604e",
@@ -58,7 +58,9 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 | marketSymbol   | Yes      | String | BTC/CAD,ETH/CAD,DOGE/CAD         |
 
 ### Request Example:
-> https://casnapliitest.virgocx.ca/v2/snaplii/getByMarketSymbol?apiKey=94e1cef3531c41bdbd420fc49359f5f2&sign=3d14adf8addcb373801229f2b97d6b32&marketSymbol=BTC/CAD
+> https://casnapliitest.virgocx.ca/v2/snaplii/getByMarketSymbolb
+
+> https://casnapliitest.virgocx.ca/v2/app/snaplii/getByMarketSymbol
 
 ### Response Example:
 ```
@@ -95,7 +97,9 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### URL:
 
->https://casnapliitest.virgocx.ca/v2/snaplii/findListByMarketId?apiKey=94e1cef3531c41bdbd420fc49359f5f2&sign=227c5febaa6c6a9fae80c3d61d71dd12&marketId=24&minType=1440
+>https://casnapliitest.virgocx.ca/v2/snaplii/findListByMarketId
+ 
+>https://casnapliitest.virgocx.ca/v2/app/snaplii/findListByMarketId
 
 #### Request Method:
 
@@ -177,3 +181,52 @@ another choice to show BTC price change.
 ### 3. Redeem points to BTC(update On ASAP)
 
 ### 4. Detect user from Snaplii(update On ASAP)
+
+### 5. Get User Id from Virgo
+#### URL:
+
+>https://casnapliitest.virgocx.ca/v2/snaplii/getUserId
+
+>https://casnapliitest.virgocx.ca/v2/app/snaplii/getUserId
+#### Request Method:
+
+> GET
+
+#### Request Parameters:
+
+| Parameter Name | Required | Type     | Description                      |
+|----------------|----------|----------|----------------------------------|
+| apiKey         | Yes      | String   | Non-production API Key See Above |
+| sign           | Yes      | String   | See Above example                |
+| birthday       | Yes      | String   | User birthday                    |
+| email          | Yes      | String   | Register email on virgo side     |
+| postalCode     | Yes      | String   | PostalCode of address            |
+<br>
+
+#### Request Example:
+> https://casnapliitest.virgocx.ca/v2/snaplii/getUserId?apiKey=94e1cef3531c41bdbd420fc49359f5f2&sign=691b3fae9f6bd56b74e10c2567da1a6d&birthday=1989-02-23&email=xiaofei19890223@outlook.com&postalCode=M2N6K1
+
+### Response Example:
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "userId": 180103132
+    },
+    "success": true
+}
+```
+#### Response Parameters:
+
+| Parameter Name | Type    | Description         |
+|----------------|---------|---------------------|
+| userId         | Integer | User ID on our side |
+---
+#### 
+Note:
+* (1)
+We plan use three parameters include "email","birthday","postalCode" to inquire a client if already register on our side,if need more parameters or have another plan, we can discuss.
+* (2)
+This user is unique and will use in points redeem. 
+---
