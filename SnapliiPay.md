@@ -1,4 +1,4 @@
-# Snaplii API DOCS Version-0.0.2
+# Snaplii API DOCS Version-0.0.3
 
 ### Get API Authorization
 

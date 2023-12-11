@@ -963,7 +963,7 @@ step-4:Final parameters list used to call https://virgocx.ca/api/member/addOrder
 
 #### Request Method:
 
-> POST
+> GET
 
 <br>
 
